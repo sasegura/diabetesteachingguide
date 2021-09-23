@@ -54,9 +54,7 @@ export default function Components(props) {
             <GridItem>
               <div className={classes.brand}>
                 <h1 className={classes.title}>Diabetes Teaching Guide</h1>
-                <h3 className={classes.subtitle}>
-                  A Badass Material-UI Kit based on Material Design.
-                </h3>
+                <h3 className={classes.subtitle}>By Adalberto Aguero.</h3>
               </div>
             </GridItem>
           </GridContainer>
