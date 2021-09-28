@@ -41,9 +41,9 @@ export default function Components(props) {
         brand="Diabetes"
         rightLinks={<HeaderLinks />}
         fixed
-        color="transparent"
+        color="shorttransparent"
         changeColorOnScroll={{
-          height: 400,
+          height: 1,
           color: "white",
         }}
         {...rest}

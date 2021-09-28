@@ -110,6 +110,12 @@ const headerStyle = {
     paddingTop: "25px",
     color: "#FFFFFF",
   },
+  shorttransparent: {
+    backgroundColor: "transparent !important",
+    boxShadow: "none",
+    paddingTop: "25px",
+    color: "black",
+  },
   dark: {
     color: "#FFFFFF",
     backgroundColor: "#212121 !important",

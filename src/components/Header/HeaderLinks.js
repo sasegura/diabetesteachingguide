@@ -60,6 +60,11 @@ export default function HeaderLinks(props) {
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
+        <Link to="/about-us" className={classes.navLink}>
+          About Us{" "}
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
         {/*<Tooltip title="Delete">
           <IconButton aria-label="Delete">
             <DeleteIcon />

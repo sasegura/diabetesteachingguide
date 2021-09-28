@@ -21,6 +21,7 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
+import { Link } from "react-router-dom";
 
 const dashboardRoutes = [];
 
@@ -32,28 +33,27 @@ export default function LandingPage(props) {
   return (
     <div>
       <Header
+        brand={
+          <Link to={"/"} className={classes.navLink}>
+            Diabetes
+          </Link>
+        }
         color="transparent"
         routes={dashboardRoutes}
-        brand="Material Kit React"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 400,
-          color: "white",
+          height: 1,
+          color: "white"
         }}
         {...rest}
       />
       <Parallax filter image={require("assets/img/landing-bg.jpg").default}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Your Story Starts With Us.</h1>
-              <h4>
-                Every landing page needs a small description after the big bold
-                title, that{"'"}s why we added this text here. Add here all the
-                information that can make you or your product create the first
-                impression.
-              </h4>
+            <GridItem xs={12} sm={12} md={4}>
+              <h1 className={classes.title}>Diabetes Teaching Guide.</h1>
+              <h4>By Adalberto Aguero.</h4>
               <br />
               <Button
                 color="danger"
