@@ -21,7 +21,7 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
-import { Link } from "react-router-dom";
+import {HeaderBrand} from "../../components/Header/HeaderBrand";
 
 const dashboardRoutes = [];
 
@@ -33,11 +33,7 @@ export default function LandingPage(props) {
   return (
     <div>
       <Header
-        brand={
-          <Link to={"/"} className={classes.navLink}>
-              <img src={require("assets/img/logo/Blue_circle_for_diabetes.svg").default} width="40px"/>
-          </Link>
-        }
+        brand={<HeaderBrand className={classes.navLink} />}
         color="transparent"
         routes={dashboardRoutes}
         rightLinks={<HeaderLinks />}

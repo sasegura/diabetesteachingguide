@@ -31,6 +31,7 @@ import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import {HeaderBrand} from "../../components/Header/HeaderBrand";
 
 const useStyles = makeStyles(styles);
 
@@ -47,7 +48,7 @@ export default function AboutUs(props) {
     <div>
       <Header
         color="transparent"
-        brand="Material Kit React"
+        brand={<HeaderBrand />}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
