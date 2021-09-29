@@ -21,23 +21,33 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
-import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import PropTypes from "prop-types";
+
+import { landingPage } from "assets/text";
+import { withTranslation } from "react-i18next";
+import { HeaderBrand } from "../../components/Header/HeaderBrand";
 
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
-export default function LandingPage(props) {
+LandingPage.propTypes = {
+  t: PropTypes.func
+};
+function LandingPage(props) {
+  const { t } = props;
   const classes = useStyles();
   const { ...rest } = props;
   return (
     <div>
+      <Helmet>
+        <title>{t(landingPage.title)}</title>
+        <meta name="description" content={landingPage.meta1} />
+        <meta charSet="utf-8" />
+      </Helmet>
       <Header
-        brand={
-          <Link to={"/"} className={classes.navLink}>
-            Diabetes
-          </Link>
-        }
+        leftLinks={<HeaderBrand className={classes.navLink} />}
         color="transparent"
         routes={dashboardRoutes}
         rightLinks={<HeaderLinks />}
@@ -52,8 +62,8 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
-              <h1 className={classes.title}>Diabetes Teaching Guide.</h1>
-              <h4>By Adalberto Aguero.</h4>
+              <h1 className={classes.title}>{t(landingPage.slogan)}</h1>
+              <h4>{t(landingPage.owner)}</h4>
               <br />
               <Button
                 color="danger"
@@ -80,3 +90,4 @@ export default function LandingPage(props) {
     </div>
   );
 }
+export default withTranslation("translations")(LandingPage);
