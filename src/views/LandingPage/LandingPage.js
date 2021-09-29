@@ -47,10 +47,14 @@ function LandingPage(props) {
         <meta charSet="utf-8" />
       </Helmet>
       <Header
-        brand={
-          <Link to={"/"} className={classes.navLink}>
-            {landingPage.title}
-          </Link>
+        leftLinks={
+          <List className={classes.list}>
+            <ListItem className={classes.listItem}>
+              <Link to={"/"} className={classes.navLink}>
+                {landingPage.title}
+              </Link>
+            </ListItem>
+          </List>
         }
         color="transparent"
         routes={dashboardRoutes}
