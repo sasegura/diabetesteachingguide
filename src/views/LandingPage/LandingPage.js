@@ -35,7 +35,7 @@ export default function LandingPage(props) {
       <Header
         brand={
           <Link to={"/"} className={classes.navLink}>
-            Diabetes
+              <img src={require("assets/img/logo/Blue_circle_for_diabetes.svg").default} width="40px"/>
           </Link>
         }
         color="transparent"
