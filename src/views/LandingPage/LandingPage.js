@@ -15,9 +15,6 @@ import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
@@ -50,17 +47,13 @@ function LandingPage(props) {
         <meta charSet="utf-8" />
       </Helmet>
       <Header
+        brand={
+          <Link to={"/"} className={classes.navLink}>
+            {landingPage.title}
+          </Link>
+        }
         color="transparent"
         routes={dashboardRoutes}
-        leftLinks={
-          <List className={classes.list}>
-            <ListItem className={classes.listItem}>
-              <Link to={"/"} className={classes.navLink}>
-                {landingPage.title}
-              </Link>
-            </ListItem>
-          </List>
-        }
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
