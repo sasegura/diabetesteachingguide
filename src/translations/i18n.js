@@ -20,7 +20,7 @@ export default i18n
       es
     },
     fallbackLng: "es",
-    debug: true,
+    debug: false,
 
     // have a common namespace used around the full app
     ns: ["translations"],
