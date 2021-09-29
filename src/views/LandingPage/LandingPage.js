@@ -21,12 +21,12 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 
 import { landingPage } from "assets/text";
 import { withTranslation } from "react-i18next";
+import { HeaderBrand } from "../../components/Header/HeaderBrand";
 
 const dashboardRoutes = [];
 
