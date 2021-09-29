@@ -31,7 +31,7 @@ import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-import {HeaderBrand} from "../../components/Header/HeaderBrand";
+import { HeaderBrand } from "../../components/Header/HeaderBrand";
 
 const useStyles = makeStyles(styles);
 
@@ -48,12 +48,12 @@ export default function AboutUs(props) {
     <div>
       <Header
         color="transparent"
-        brand={<HeaderBrand />}
+        leftLinks={<HeaderBrand className={classes.navLink} />}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
           height: 200,
-          color: "white",
+          color: "white"
         }}
         {...rest}
       />
@@ -131,7 +131,7 @@ export default function AboutUs(props) {
                             />
                           </GridItem>
                         </GridContainer>
-                      ),
+                      )
                     },
                     {
                       tabButton: "Work",
@@ -168,7 +168,7 @@ export default function AboutUs(props) {
                             />
                           </GridItem>
                         </GridContainer>
-                      ),
+                      )
                     },
                     {
                       tabButton: "Favorite",
@@ -205,8 +205,8 @@ export default function AboutUs(props) {
                             />
                           </GridItem>
                         </GridContainer>
-                      ),
-                    },
+                      )
+                    }
                   ]}
                 />
               </GridItem>

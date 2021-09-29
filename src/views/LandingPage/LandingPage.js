@@ -47,7 +47,7 @@ function LandingPage(props) {
         <meta charSet="utf-8" />
       </Helmet>
       <Header
-        brand={<HeaderBrand className={classes.navLink} />}
+        leftLinks={<HeaderBrand className={classes.navLink} />}
         color="transparent"
         routes={dashboardRoutes}
         rightLinks={<HeaderLinks />}
