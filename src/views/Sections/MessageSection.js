@@ -24,7 +24,7 @@ function MessageSection(props) {
   const { t } = props;
   const classes = useStyles();
   return (
-    <div className={classes.section}>
+    <div>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
           <h2 className={classes.title}>{t(messageSection.title)}</h2>
