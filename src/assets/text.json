@@ -1,9 +1,25 @@
 {
   "title": "Diabetes",
+  "siteTitle": "Diabetes Teaching Guide.",
+  "owner": "Owner",
   "landingPage": {
     "title": "Diabetes",
     "meta1": "http://diabetesteachingguide.com",
     "slogan": "Diabetes Teaching Guide.",
     "owner": "By Adalberto Aguero."
+  },
+  "aboutUs": {
+    "founder": "Founder of The Healthy Diabetic"
+  },
+  "presentations": {
+    "explanation": "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life."
+  },
+  "teamSection": {
+    "albertAguero": "Alberto Aguero",
+    "messageTitle": "A Message from the Founder of The Healthy Diabetic",
+    "message": "As founder of The Healthy Diabetic, LLC, Alberto Aguero, RPh has been consulting with patients in his pharmacy since 2012 and developed The Diabetes Teaching Guide as a clear and easy way to teach his patients about the importance of diabetes self management. Pharmacy Value is one of the few pharmacies in NJ that can bill Medicare for diabetes self management training. Since the beginning Pharmacy Value has had an amazing success rate in overall health improvement of their patients and they hope more pharmacists will fill this much needed gap in patient care."
+  },
+  "messageSection": {
+    "title": "Message Us"
   }
 }
