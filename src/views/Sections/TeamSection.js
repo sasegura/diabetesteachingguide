@@ -11,7 +11,6 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
-import CardFooter from "components/Card/CardFooter.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
@@ -35,9 +34,8 @@ function TeamSection(props) {
     classes.imgFluid
   );
   return (
-    <div className={classes.section}>
+    <div>
       <h2 className={classes.title}>{teamSection.messageTitle}</h2>
-
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
@@ -48,7 +46,7 @@ function TeamSection(props) {
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={6}>
-            <Card plain>
+            <Card plain margin={0}>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={albert} alt="..." className={imageClasses} />
               </GridItem>
@@ -57,8 +55,6 @@ function TeamSection(props) {
                 <br />
                 <small className={classes.smallTitle}>{t(owner)}</small>
               </h4>
-              <CardBody></CardBody>
-              <CardFooter className={classes.justifyCenter}></CardFooter>
             </Card>
           </GridItem>
         </GridContainer>

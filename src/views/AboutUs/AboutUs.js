@@ -47,7 +47,9 @@ function AboutUs(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
-            <TeamSection />
+            <div className={classes.section}>
+              <TeamSection />
+            </div>
           </div>
         </div>
       </div>
