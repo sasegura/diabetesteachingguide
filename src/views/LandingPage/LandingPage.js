@@ -18,15 +18,16 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
-import WorkSection from "./Sections/WorkSection.js";
+import ProductSection from "../Sections/ProductSection.js";
+import TeamSection from "../Sections/TeamSection.js";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 
 import { landingPage } from "assets/text";
 import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
+import MessageSection from "views/Sections/MessageSection.js";
+import FacSection from "views/Sections/FacSection.js";
 
 const dashboardRoutes = [];
 
@@ -83,7 +84,8 @@ function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection />
           <TeamSection />
-          <WorkSection />
+          <MessageSection />
+          <FacSection />
         </div>
       </div>
       <Footer />
