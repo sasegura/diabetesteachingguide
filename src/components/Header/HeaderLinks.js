@@ -116,7 +116,7 @@ export default function HeaderLinks(props) {
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Link to="/about-us" className={classes.navLink}>
+        <Link to="/profile-page" className={classes.navLink}>  {/* TODO Cambiar el link*/}
           <IconHelpOutline className={classes.icons}/>
           {t("FAQ")}
         </Link>
@@ -182,14 +182,18 @@ export default function HeaderLinks(props) {
                   <ListItemIcon>
                     <IconAccountCircle />
                   </ListItemIcon>
-                  <ListItemText primary={t("Login")} />
+                  <Link to={"/components"} className={classes.dropdownLink} style={{padding: "0px"}}>
+                    <ListItemText primary={t("Login")}/>
+                  </Link>
                 </ListItem>,
                 <Divider />,
                 <ListItem>
                   <ListItemIcon>
                     <Login />
                   </ListItemIcon>
-                  <ListItemText primary={t("Login")} />
+                  <Link to={"/login-page"} className={classes.dropdownLink} style={{padding: "0px"}}>
+                    <ListItemText primary={t("Login")}/>
+                  </Link>
                 </ListItem>,
                 <ListItem>
                   <ListItemIcon>
