@@ -8,18 +8,21 @@ import "assets/scss/material-kit-react.scss?v=1.10.0";
 // pages for this product
 import Components from "views/Components/Components.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
-import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutUs from "views/AboutUs/AboutUs";
+import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
+
 import "./translations/i18n";
 var hist = createBrowserHistory();
 import Amplify from "aws-amplify";
 import config from "./aws-exports";
+import FAC from "views/FAC/FAC";
 Amplify.configure(config);
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/profile-page" component={ProfilePage} />
+      <Route path="/FAC" component={FAC} />
       <Route path="/login-page" component={LoginPage} />
       <Route path="/components" component={Components} />
       <Route path="/about-us" component={AboutUs} />
