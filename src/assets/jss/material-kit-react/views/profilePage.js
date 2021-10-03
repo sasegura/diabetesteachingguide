@@ -56,6 +56,16 @@ const profilePageStyle = {
   navWrapper: {
     margin: "20px auto 50px auto",
     textAlign: "center"
+  },
+  icon: {
+    width: "100%",
+    margin: "0 auto",
+    maxWidth: "160px",
+    transform: "translate3d(0, -50%, 0)",
+    boxShadow:
+      "0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+    borderRadius: "50% !important",
+    height: "auto"
   }
 };
 

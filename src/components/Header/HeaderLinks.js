@@ -28,14 +28,14 @@ import Logout from "mdi-material-ui/Logout";
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
-import { Auth } from "aws-amplify";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
   const { t, i18n } = useTranslation();
-  const history = useHistory();
+  const { loginWithRedirect, logout } = useAuth0();
   return (
     // TODO remove commented code
     <List className={classes.list}>
@@ -230,11 +230,11 @@ export default function HeaderLinks(props) {
                   <IconAccountCircle />
                 </ListItemIcon>
                 <Link
-                  to={"/components"}
+                  to={"/profile-page"}
                   className={classes.dropdownLink}
                   style={{ padding: "0px" }}
                 >
-                  <ListItemText primary={t("Login")} />
+                  <ListItemText primary={t("User")} />
                 </Link>
               </ListItem>,
               <Divider />,
@@ -247,7 +247,12 @@ export default function HeaderLinks(props) {
                   className={classes.dropdownLink}
                   style={{ padding: "0px" }}
                 >
-                  <ListItemText primary={t("Login")} />
+                  <ListItemText
+                    primary={t("Login")}
+                    onClick={() => {
+                      loginWithRedirect();
+                    }}
+                  />
                 </Link>
               </ListItem>,
               <ListItem>
@@ -262,7 +267,7 @@ export default function HeaderLinks(props) {
                   <ListItemText
                     primary={t("Logout")}
                     onClick={() => {
-                      Auth.signOut();
+                      logout({ returnTo: window.location.origin });
                     }}
                   ></ListItemText>
                 </Link>
