@@ -1,10 +1,10 @@
 /*eslint-disable*/
 import React from "react";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 // react components for routing our app without refresh
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -19,25 +19,26 @@ import IconHelpOutline from "@material-ui/icons/HelpOutline";
 import IconPersonOutlineOutlined from "@material-ui/icons/PersonOutlineOutlined";
 import IconShoppingCartOutlined from "@material-ui/icons/ShoppingCartOutlined";
 import IconList from "@material-ui/icons/List";
-import IconAccountCircle from "@material-ui/icons/AccountCircle"
+import IconAccountCircle from "@material-ui/icons/AccountCircle";
 
 // mdi-material-ui icons
-import Login from "mdi-material-ui/Login"
-import Logout from "mdi-material-ui/Logout"
+import Login from "mdi-material-ui/Login";
+import Logout from "mdi-material-ui/Logout";
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
+import { Auth } from "aws-amplify";
 
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
-  const {t, i18n} = useTranslation();
-
-  return ( // TODO remove commented code
+  const { t, i18n } = useTranslation();
+  const history = useHistory();
+  return (
+    // TODO remove commented code
     <List className={classes.list}>
-
       {/*<ListItem className={classes.listItem}>*/}
       {/*  <Button*/}
       {/*    href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"*/}
@@ -55,60 +56,100 @@ export default function HeaderLinks(props) {
           buttonText={t("Guide")}
           buttonProps={{
             className: classes.navLink,
-            color: "transparent",
+            color: "transparent"
           }}
           hoverColor={"info"}
           buttonIcon={IconList}
-
-          dropdownList={[  // TODO generar la lista con un ciclo
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideIntro")}/>
+          dropdownList={[
+            // TODO generar la lista con un ciclo
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideIntro")} />
               </Link>
             </ListItem>,
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideNutrition")}/>
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideNutrition")} />
               </Link>
             </ListItem>,
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideActivity")}/>
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideActivity")} />
               </Link>
             </ListItem>,
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideWeight")}/>
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideWeight")} />
               </Link>
             </ListItem>,
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideGlucose")}/>
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideGlucose")} />
               </Link>
             </ListItem>,
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideMedication")}/>
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideMedication")} />
               </Link>
             </ListItem>,
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideComplications")}/>
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideComplications")} />
               </Link>
             </ListItem>,
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideSickDays")}/>
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideSickDays")} />
               </Link>
             </ListItem>,
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideLiving")}/>
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideLiving")} />
               </Link>
             </ListItem>,
-            <ListItem >
-              <Link to="/" className={classes.dropdownLink} style={{padding: "0px"}}>
-                <ListItemText primary={t("GuideInsulin")}/>
+            <ListItem>
+              <Link
+                to="/"
+                className={classes.dropdownLink}
+                style={{ padding: "0px" }}
+              >
+                <ListItemText primary={t("GuideInsulin")} />
               </Link>
             </ListItem>
           ]}
@@ -116,15 +157,17 @@ export default function HeaderLinks(props) {
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Link to="/profile-page" className={classes.navLink}>  {/* TODO Cambiar el link*/}
-          <IconHelpOutline className={classes.icons}/>
+        <Link to="/FAC" className={classes.navLink}>
+          {" "}
+          {/* TODO Cambiar el link*/}
+          <IconHelpOutline className={classes.icons} />
           {t("FAQ")}
         </Link>
       </ListItem>
 
       <ListItem className={classes.listItem}>
         <Link to="/about-us" className={classes.navLink}>
-          <IconInfoOutlined className={classes.icons}/>
+          <IconInfoOutlined className={classes.icons} />
           {t("About")}
         </Link>
       </ListItem>
@@ -134,30 +177,34 @@ export default function HeaderLinks(props) {
         {/*         title={t("Language")}*/}
         {/*         placement={window.innerWidth > 959 ? "top" : "left"}*/}
         {/*         classes={{tooltip: classes.tooltip}}>*/}
-          <div>
-            <CustomDropdown
-              noLiPadding
-              buttonProps={{
-                className: classes.navLink,
-                color: "transparent"
-              }}
-              hoverColor={"info"}
-              buttonIcon={IconTranslateOutlined}
-              dropdownList={[
-                <ListItem>
-                  <ListItemText
-                    primary={"Español"}
-                    onClick={() => {i18n.changeLanguage("es")} }
-                  />
-                </ListItem>,
-                <ListItem>
-                  <ListItemText
-                    primary={"English"}
-                    onClick={() => {i18n.changeLanguage("en")} }
-                  />
-                </ListItem>
-              ]}
-            />
+        <div>
+          <CustomDropdown
+            noLiPadding
+            buttonProps={{
+              className: classes.navLink,
+              color: "transparent"
+            }}
+            hoverColor={"info"}
+            buttonIcon={IconTranslateOutlined}
+            dropdownList={[
+              <ListItem>
+                <ListItemText
+                  primary={"Español"}
+                  onClick={() => {
+                    i18n.changeLanguage("es");
+                  }}
+                />
+              </ListItem>,
+              <ListItem>
+                <ListItemText
+                  primary={"English"}
+                  onClick={() => {
+                    i18n.changeLanguage("en");
+                  }}
+                />
+              </ListItem>
+            ]}
+          />
         </div>
         {/*</Tooltip>*/}
       </ListItem>
@@ -168,48 +215,67 @@ export default function HeaderLinks(props) {
         {/*         placement={window.innerWidth > 959 ? "top" : "left"}*/}
         {/*         // classes={{tooltip: classes.tooltip}}*/}
         {/*>*/}
-          <div>
-            <CustomDropdown
-              noLiPadding
-              buttonProps={{
-                className: classes.navLink,
-                color: "transparent"
-              }}
-              hoverColor={"info"}
-              buttonIcon={IconPersonOutlineOutlined}
-              dropdownList={[
-                <ListItem>
-                  <ListItemIcon>
-                    <IconAccountCircle />
-                  </ListItemIcon>
-                  <Link to={"/components"} className={classes.dropdownLink} style={{padding: "0px"}}>
-                    <ListItemText primary={t("Login")}/>
-                  </Link>
-                </ListItem>,
-                <Divider />,
-                <ListItem>
-                  <ListItemIcon>
-                    <Login />
-                  </ListItemIcon>
-                  <Link to={"/login-page"} className={classes.dropdownLink} style={{padding: "0px"}}>
-                    <ListItemText primary={t("Login")}/>
-                  </Link>
-                </ListItem>,
-                <ListItem>
-                  <ListItemIcon>
-                    <Logout />
-                  </ListItemIcon>
-                  <ListItemText primary={t("Logout")} />
-                </ListItem>,
-                <Divider/>,
-                <ListItem>
-                  <ListItemIcon>
-                    <IconShoppingCartOutlined />
-                  </ListItemIcon>
-                  <ListItemText primary={t("ShopCart")} />
-                </ListItem>
-              ]}
-            />
+        <div>
+          <CustomDropdown
+            noLiPadding
+            buttonProps={{
+              className: classes.navLink,
+              color: "transparent"
+            }}
+            hoverColor={"info"}
+            buttonIcon={IconPersonOutlineOutlined}
+            dropdownList={[
+              <ListItem>
+                <ListItemIcon>
+                  <IconAccountCircle />
+                </ListItemIcon>
+                <Link
+                  to={"/components"}
+                  className={classes.dropdownLink}
+                  style={{ padding: "0px" }}
+                >
+                  <ListItemText primary={t("Login")} />
+                </Link>
+              </ListItem>,
+              <Divider />,
+              <ListItem>
+                <ListItemIcon>
+                  <Login />
+                </ListItemIcon>
+                <Link
+                  to={"/profile-page"}
+                  className={classes.dropdownLink}
+                  style={{ padding: "0px" }}
+                >
+                  <ListItemText primary={t("Login")} />
+                </Link>
+              </ListItem>,
+              <ListItem>
+                <ListItemIcon>
+                  <Logout />
+                </ListItemIcon>
+                <Link
+                  to="/"
+                  className={classes.dropdownLink}
+                  style={{ padding: "0px" }}
+                >
+                  <ListItemText
+                    primary={t("Logout")}
+                    onClick={() => {
+                      Auth.signOut();
+                    }}
+                  ></ListItemText>
+                </Link>
+              </ListItem>,
+              <Divider />,
+              <ListItem>
+                <ListItemIcon>
+                  <IconShoppingCartOutlined />
+                </ListItemIcon>
+                <ListItemText primary={t("ShopCart")} />
+              </ListItem>
+            ]}
+          />
         </div>
         {/*</Tooltip>*/}
       </ListItem>

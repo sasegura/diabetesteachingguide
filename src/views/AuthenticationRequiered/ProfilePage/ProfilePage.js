@@ -31,10 +31,13 @@ import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import { withAuthenticator } from "@aws-amplify/ui-react";
+import { withTranslation } from "react-i18next";
+import { HeaderBrand } from "components/Header/HeaderBrand";
 
 const useStyles = makeStyles(styles);
 
-export default function ProfilePage(props) {
+function ProfilePage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   const imageClasses = classNames(
@@ -47,12 +50,12 @@ export default function ProfilePage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Material Kit React"
+        leftLinks={<HeaderBrand className={classes.navLink} />}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 200,
-          color: "white",
+          height: 50,
+          color: "white"
         }}
         {...rest}
       />
@@ -130,7 +133,7 @@ export default function ProfilePage(props) {
                             />
                           </GridItem>
                         </GridContainer>
-                      ),
+                      )
                     },
                     {
                       tabButton: "Work",
@@ -167,7 +170,7 @@ export default function ProfilePage(props) {
                             />
                           </GridItem>
                         </GridContainer>
-                      ),
+                      )
                     },
                     {
                       tabButton: "Favorite",
@@ -204,8 +207,8 @@ export default function ProfilePage(props) {
                             />
                           </GridItem>
                         </GridContainer>
-                      ),
-                    },
+                      )
+                    }
                   ]}
                 />
               </GridItem>
@@ -217,3 +220,5 @@ export default function ProfilePage(props) {
     </div>
   );
 }
+
+export default withAuthenticator(withTranslation("translations")(ProfilePage));

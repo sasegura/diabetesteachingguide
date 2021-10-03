@@ -28,7 +28,6 @@ import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
 import MessageSection from "views/Sections/MessageSection.js";
 import FacSection from "views/Sections/FacSection.js";
-
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
