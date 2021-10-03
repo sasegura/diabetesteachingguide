@@ -28,7 +28,7 @@ import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
 import MessageSection from "views/Sections/MessageSection.js";
 import FacSection from "views/Sections/FacSection.js";
-
+import { withAuthenticator } from "@aws-amplify/ui-react";
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
@@ -92,4 +92,4 @@ function LandingPage(props) {
     </div>
   );
 }
-export default withTranslation("translations")(LandingPage);
+export default withAuthenticator(withTranslation("translations")(LandingPage));

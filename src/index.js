@@ -13,7 +13,9 @@ import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutUs from "views/AboutUs/AboutUs";
 import "./translations/i18n";
 var hist = createBrowserHistory();
-
+import Amplify from "aws-amplify";
+import config from "./aws-exports";
+Amplify.configure(config);
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
