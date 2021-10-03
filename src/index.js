@@ -14,10 +14,7 @@ import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
 
 import "./translations/i18n";
 var hist = createBrowserHistory();
-import Amplify from "aws-amplify";
-import config from "./aws-exports";
 import FAC from "views/FAC/FAC";
-Amplify.configure(config);
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
