@@ -31,7 +31,6 @@ import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-import { withAuthenticator } from "@aws-amplify/ui-react";
 import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "components/Header/HeaderBrand";
 
@@ -221,4 +220,4 @@ function ProfilePage(props) {
   );
 }
 
-export default withAuthenticator(withTranslation("translations")(ProfilePage));
+export default withTranslation("translations")(ProfilePage);
