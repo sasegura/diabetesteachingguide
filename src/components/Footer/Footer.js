@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // material-ui core components
-import { makeStyles } from "@material-ui/core/styles";
+import {makeStyles} from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItem from "@material-ui/core/ListItem";
@@ -17,11 +17,13 @@ import ListItem from "@material-ui/core/ListItem";
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 import GridContainer from "../Grid/GridContainer";
 import GridItem from "../Grid/GridItem";
+import {Box} from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
 const useMainStyles = makeStyles({
   main: {
-    background: "#e5e5e5",
+    backgroundColor: "#363839",
+    color: "#fff",
     position: "relative",
     zIndex: "3",
     padding: "1em"
@@ -45,7 +47,7 @@ export default function Footer(props) {
   const classesMain = useMainStyles();
   const classesFooter = useFooterStyles();
 
-  const { whiteFont } = props;
+  const {whiteFont} = props;
   const footerClasses = classNames({
     [classes.footer]: true,
     [classes.footerWhiteFont]: whiteFont,
@@ -55,7 +57,7 @@ export default function Footer(props) {
     [classes.footerWhiteFont]: whiteFont,
   });
 
-  const guide_topics= [
+  const guide_topics = [
     ["Introduction to Diabetes", "/"],
     ["Nutrition and Carbohydrate Counting", "/"],
     ["Physical Activity", "/"],
@@ -67,84 +69,82 @@ export default function Footer(props) {
     ["Living with Diabetes", "/"],
     ["Insulin", "/"]
   ];
-  const middle = guide_topics.length/2;
+  const middle = guide_topics.length / 2;
   const guideStart = guide_topics.slice(0, middle);
   const guideEnd = guide_topics.slice(middle, guide_topics.length);
 
-  // const muiLink = require("@material-ui/core").Link;
-
   return (
-    <div >
-      <footer className={classNames(classesMain.main, classesMain.mainRaised)} >
+    <>
+      <footer className={classNames(classesMain.main, classesMain.mainRaised)}>
         <GridContainer spacing={1}
-                         direction="row"
-                         justifyContent="space-between"
-                         alignItems="stretch"
-          >
-            <GridItem xs={12} sm={12} md={6}>
-              <h6 className={classesFooter.subSectionTitle}> {"Guide"} </h6>
-              {/*{document.viewport.width === }*/}
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
+                       direction="row"
+                       justifyContent="space-between"
+                       alignItems="stretch"
+        >
+          <GridItem xs={12} sm={12} md={5}>
+            <h6 className={classesFooter.subSectionTitle}
+                style={{height: "5%"}}
+            > {"Guide"} </h6>
+            <Box css={{height: "85%", borderRight: "1px solid #8c8989"}}>
+              <GridContainer style={{margin: "0px"}}>
+                <GridItem xs={12} sm={12} md={6} style={{padding: "0px"}}>
                   <List dense={true}>
-                    {guideStart.map(([title, link]) =>{
+                    {guideStart.map(([title, link]) => {
                       return <ListItem>
-                      <Link to={link}>
-                        <ListItemText primary={title}/>
-                      </Link>
-                    </ListItem>
+                        <Link to={link} style={{color: "#bfbfbf"}}>
+                          <ListItemText primary={title}/>
+                        </Link>
+                      </ListItem>
                     })}
                   </List>
                 </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
+                <GridItem xs={12} sm={12} md={6} style={{padding: "0px"}}>
                   <List dense={true}>
-                    {guideEnd.map(([title, link]) =>{
+                    {guideEnd.map(([title, link]) => {
                       return <ListItem>
-                      <Link to={link}>
-                        <ListItemText primary={title}/>
-                      </Link>
-                    </ListItem>
+                        <Link to={link} style={{color: "#bfbfbf"}}>
+                          <ListItemText primary={title}/>
+                        </Link>
+                      </ListItem>
                     })}
                   </List>
                 </GridItem>
               </GridContainer>
-                {/*<List dense={true}>*/}
-                {/*  {guide_topics.map(([title, link]) => {*/}
-                {/*    console.log(title, link);*/}
-                {/*    return <ListItem>*/}
-                {/*      <Link to={link}>*/}
-                {/*        <ListItemText primary={title}/>*/}
-                {/*      </Link>*/}
-                {/*    </ListItem>*/}
-                {/*  })}*/}
-                {/*</List>*/}
-            </GridItem>
-            <GridItem xs={12} sm={12} md={3}>
-              <h6 className={classesFooter.subSectionTitle}> {"Site Map"} </h6>
+            </Box>
+
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <h6 className={classesFooter.subSectionTitle}
+                style={{height: "5%"}}> {"Site Map"} </h6>
+            <Box css={{height: "85%", borderRight: "1px solid #8c8989"}}>
               <List dense={true}>
                 {guideStart.map(([title, link]) => {
                   console.log(title, link);
-                  return <ListItem >
-                    <Link to={link}>
+                  return <ListItem>
+                    <Link to={link} style={{color: "#bfbfbf"}}>
                       <ListItemText primary={title}/>
                     </Link>
                   </ListItem>
                 })}
               </List>
-            </GridItem>
-            <GridItem xs={12} sm={12} md={3}>
-              <h6 className={classesFooter.subSectionTitle}> {"Contact"} </h6>
+            </Box>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <h6 className={classesFooter.subSectionTitle}
+                style={{height: "5%"}}> {"Contact"} </h6>
+            <Box css={{height: "85%",}}>
               <List dense={true}>
                 {guideEnd.map(([title, link]) => {
                   return <ListItem>
-                    <Link to={link}>
-                      <ListItemText primary={title}/>
+                    <Link to={link} style={{color: "#bfbfbf"}}>
+                      <ListItemText color={"info"} primary={title}/>
                     </Link>
                   </ListItem>
                 })}
               </List>
-            </GridItem>
-          </GridContainer>
+            </Box>
+          </GridItem>
+        </GridContainer>
       </footer>
 
       <footer className={footerClasses}>
@@ -160,7 +160,7 @@ export default function Footer(props) {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
 
