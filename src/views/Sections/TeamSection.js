@@ -34,31 +34,37 @@ function TeamSection(props) {
     classes.imgFluid
   );
   return (
-    <div>
-      <h2 className={classes.title}>{teamSection.messageTitle}</h2>
-      <div>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={6}>
-            <Card plain>
-              <CardBody>
-                <p className={classes.description}>{teamSection.message}</p>
-              </CardBody>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
-            <Card plain margin={0}>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={albert} alt="..." className={imageClasses} />
+    <div className={classes.container}>
+      <GridContainer justify="center">
+        <GridItem xs={12} sm={12} md={10}>
+          <h2 className={classes.title}>{t(teamSection.messageTitle)}</h2>
+          <div>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={6}>
+                <Card plain>
+                  <CardBody>
+                    <p className={classes.description}>
+                      {t(teamSection.message)}
+                    </p>
+                  </CardBody>
+                </Card>
               </GridItem>
-              <h4 className={classes.cardTitle}>
-                {teamSection.albertAguero}
-                <br />
-                <small className={classes.smallTitle}>{t(owner)}</small>
-              </h4>
-            </Card>
-          </GridItem>
-        </GridContainer>
-      </div>
+              <GridItem xs={12} sm={12} md={6}>
+                <Card plain margin={0}>
+                  <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                    <img src={albert} alt="..." className={imageClasses} />
+                    <h4 className={classes.cardTitle}>
+                      {teamSection.albertAguero}
+                      <br />
+                      <small className={classes.smallTitle}>{t(owner)}</small>
+                    </h4>
+                  </GridItem>
+                </Card>
+              </GridItem>
+            </GridContainer>
+          </div>
+        </GridItem>
+      </GridContainer>
     </div>
   );
 }
