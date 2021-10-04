@@ -11,6 +11,7 @@
     "Login": "Login",
     "Logout": "Logout",
     "ShopCart": "Shopping Cart",
+    "Owner": "Owner",
 
     "GuideIntro": "Introduction to Diabetes",
     "GuideNutrition": "Nutrition and Carbohydrate Counting",
@@ -25,6 +26,31 @@
 
     "_____Cookies": "Cookies",
     "This website uses cookies to enhance the user experience.": "This website uses cookies to enhance the user experience.",
-    "Acept": "Acept"
+    "Acept": "Acept",
+
+    "______MessageSection": "MessageSectio",
+    "Message Us": "Message Us",
+    "Send Message": "Send Message",
+    "Your Message": "Your Message",
+    "Your Email": "Your Email",
+    "Your Name": "Your Name",
+
+    "_____TeamSection": "TeamSection",
+    "A Message from the Founder of The Healthy Diabetic": "A Message from the Founder of The Healthy Diabetic",
+    "As founder of The Healthy Diabetic, LLC, Alberto Aguero, RPh has been consulting with patients in his pharmacy since 2012 and developed The Diabetes Teaching Guide as a clear and easy way to teach his patients about the importance of diabetes self management. Pharmacy Value is one of the few pharmacies in NJ that can bill Medicare for diabetes self management training. Since the beginning Pharmacy Value has had an amazing success rate in overall health improvement of their patients and they hope more pharmacists will fill this much needed gap in patient care.": "As founder of The Healthy Diabetic, LLC, Alberto Aguero, RPh has been consulting with patients in his pharmacy since 2012 and developed The Diabetes Teaching Guide as a clear and easy way to teach his patients about the importance of diabetes self management. Pharmacy Value is one of the few pharmacies in NJ that can bill Medicare for diabetes self management training. Since the beginning Pharmacy Value has had an amazing success rate in overall health improvement of their patients and they hope more pharmacists will fill this much needed gap in patient care.",
+
+    "_____ProdutSection": "ProdutSection",
+    "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life.": "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life.",
+
+    "_____FAC": "FAC",
+    "Frequently Asked Questions about The Pharmacy Guide for Diabetes Teaching": "Frequently Asked Questions about The Pharmacy Guide for Diabetes Teaching",
+    "For complete details, please visit the AADE website.": "For complete details, please visit the AADE website.",
+    "Below are some common questions and answers related to using The Pharmacy Guide for Diabetes Teaching, if your question was not answered here please email us;": "Below are some common questions and answers related to using The Pharmacy Guide for Diabetes Teaching, if your question was not answered here please email us;",
+    "Who is eligible for The Pharmacy Guide for Diabetes Teaching program?": "Who is eligible for The Pharmacy Guide for Diabetes Teaching program?",
+    "What requirements must the pharmacists complete to be eligible for Medicare reimbursement?": "What requirements must the pharmacists complete to be eligible for Medicare reimbursement?",
+    "What paperwork must be provided to qualify for Medicare reimbursement?": "What paperwork must be provided to qualify for Medicare reimbursement?",
+    "This program is open to all independent pharmacists who would like to provide diabetes education to their patients in an individual or group setting.": "This program is open to all independent pharmacists who would like to provide diabetes education to their patients in an individual or group setting.",
+    "All pharmacists must obtain at least 15 CE credits in diabetes to begin their diabetes self management teaching. Once the program has begun, contact the AADE and submit an application for approval of the program. Once approved, submit an application to Medicare to be eligible to bill Medicare Part B for your services.": "All pharmacists must obtain at least 15 CE credits in diabetes to begin their diabetes self management teaching. Once the program has begun, contact the AADE and submit an application for approval of the program. Once approved, submit an application to Medicare to be eligible to bill Medicare Part B for your services.",
+    "Once you have purchased and downloaded our program you will receive all the required forms to manage this program including patient tracking forms, activity logs, and even a step-by-step outline of how to obtain approval for diabetes self-management education from AADE and Medicare.": "Once you have purchased and downloaded our program you will receive all the required forms to manage this program including patient tracking forms, activity logs, and even a step-by-step outline of how to obtain approval for diabetes self-management education from AADE and Medicare."
   }
 }

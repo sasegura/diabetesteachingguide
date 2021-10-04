@@ -25,8 +25,8 @@ function FacSection(props) {
     <div>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={10}>
-          <h2 className={classes.title}>{facSection.title}</h2>
-          <h5 className={classes.description}>{facSection.text1}</h5>
+          <h2 className={classes.title}>{t(facSection.title)}</h2>
+          <h5 className={classes.description}>{t(facSection.text1)}</h5>
         </GridItem>
       </GridContainer>
       <div>
