@@ -7,17 +7,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import Camera from "@material-ui/icons/Camera";
 import Palette from "@material-ui/icons/Palette";
 import Favorite from "@material-ui/icons/Favorite";
+import Person from "@material-ui/icons/Person";
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
-import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 
-import profile from "assets/img/faces/christian.jpg";
+// import profile from "assets/img/faces/christian.jpg";
 
 import studio1 from "assets/img/examples/studio-1.jpg";
 import studio2 from "assets/img/examples/studio-2.jpg";
@@ -31,10 +31,18 @@ import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import { withTranslation } from "react-i18next";
+import { HeaderBrand } from "components/Header/HeaderBrand";
+import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
+import { Loading } from "mdi-material-ui";
 
 const useStyles = makeStyles(styles);
 
-export default function ProfilePage(props) {
+function ProfilePage(props) {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+  console.log(user);
+  console.log(isAuthenticated);
+  console.log(isLoading);
   const classes = useStyles();
   const { ...rest } = props;
   const imageClasses = classNames(
@@ -47,12 +55,12 @@ export default function ProfilePage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Material Kit React"
+        leftLinks={<HeaderBrand className={classes.navLink} />}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 200,
-          color: "white",
+          height: 50,
+          color: "white"
         }}
         {...rest}
       />
@@ -68,20 +76,23 @@ export default function ProfilePage(props) {
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
-                    <img src={profile} alt="..." className={imageClasses} />
+                    {user.picturea ? (
+                      <img
+                        src={user.picture}
+                        alt="..."
+                        className={imageClasses}
+                      />
+                    ) : (
+                      <div>
+                        <Person
+                          className={classes.icon}
+                          style={{ fill: "purple" }}
+                        />
+                      </div>
+                    )}
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-twitter"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-instagram"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-facebook"} />
-                    </Button>
+                    <h3 className={classes.title}>{user.name}</h3>
                   </div>
                 </div>
               </GridItem>
@@ -130,7 +141,7 @@ export default function ProfilePage(props) {
                             />
                           </GridItem>
                         </GridContainer>
-                      ),
+                      )
                     },
                     {
                       tabButton: "Work",
@@ -167,7 +178,7 @@ export default function ProfilePage(props) {
                             />
                           </GridItem>
                         </GridContainer>
-                      ),
+                      )
                     },
                     {
                       tabButton: "Favorite",
@@ -204,8 +215,8 @@ export default function ProfilePage(props) {
                             />
                           </GridItem>
                         </GridContainer>
-                      ),
-                    },
+                      )
+                    }
                   ]}
                 />
               </GridItem>
@@ -217,3 +228,9 @@ export default function ProfilePage(props) {
     </div>
   );
 }
+export default withAuthenticationRequired(
+  withTranslation("translations")(ProfilePage),
+  {
+    onRedirecting: () => <Loading />
+  }
+);

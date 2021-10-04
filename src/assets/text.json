@@ -1,9 +1,36 @@
 {
   "title": "Diabetes",
+  "siteTitle": "Diabetes Teaching Guide.",
+  "owner": "Owner",
   "landingPage": {
     "title": "Diabetes",
     "meta1": "http://diabetesteachingguide.com",
     "slogan": "Diabetes Teaching Guide.",
     "owner": "By Adalberto Aguero."
+  },
+  "aboutUs": {
+    "founder": "Founder of The Healthy Diabetic"
+  },
+  "presentations": {
+    "explanation": "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life."
+  },
+  "teamSection": {
+    "albertAguero": "Alberto Aguero",
+    "messageTitle": "A Message from the Founder of The Healthy Diabetic",
+    "message": "As founder of The Healthy Diabetic, LLC, Alberto Aguero, RPh has been consulting with patients in his pharmacy since 2012 and developed The Diabetes Teaching Guide as a clear and easy way to teach his patients about the importance of diabetes self management. Pharmacy Value is one of the few pharmacies in NJ that can bill Medicare for diabetes self management training. Since the beginning Pharmacy Value has had an amazing success rate in overall health improvement of their patients and they hope more pharmacists will fill this much needed gap in patient care."
+  },
+  "messageSection": {
+    "title": "Message Us"
+  },
+  "facSection": {
+    "title": "Frequently Asked Questions about The Pharmacy Guide for Diabetes Teaching",
+    "link": "For complete details, please visit the AADE website.",
+    "text1": "Below are some common questions and answers related to using The Pharmacy Guide for Diabetes Teaching, if your question was not answered here please email us;",
+    "question1": "Who is eligible for The Pharmacy Guide for Diabetes Teaching program?",
+    "question2": "What requirements must the pharmacists complete to be eligible for Medicare reimbursement?",
+    "question3": "What paperwork must be provided to qualify for Medicare reimbursement?",
+    "response1": "This program is open to all independent pharmacists who would like to provide diabetes education to their patients in an individual or group setting.",
+    "response2": "All pharmacists must obtain at least 15 CE credits in diabetes to begin their diabetes self management teaching. Once the program has begun, contact the AADE and submit an application for approval of the program. Once approved, submit an application to Medicare to be eligible to bill Medicare Part B for your services.",
+    "response3": "Once you have purchased and downloaded our program you will receive all the required forms to manage this program including patient tracking forms, activity logs, and even a step-by-step outline of how to obtain approval for diabetes self-management education from AADE and Medicare. "
   }
 }

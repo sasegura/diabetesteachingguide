@@ -14,15 +14,15 @@ import { withTranslation } from "react-i18next";
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
 
-import TeamSection from "views/Sections/TeamSection";
+import FacSection from "views/Sections/FacSection";
 
 const useStyles = makeStyles(styles);
 
-AboutUs.propTypes = {
+FAC.propTypes = {
   t: PropTypes.func
 };
 
-function AboutUs(props) {
+function FAC(props) {
   const classes = useStyles();
   const { ...rest } = props;
 
@@ -48,7 +48,7 @@ function AboutUs(props) {
         <div>
           <div className={classes.container}>
             <div className={classes.section}>
-              <TeamSection />
+              <FacSection />
             </div>
           </div>
         </div>
@@ -57,4 +57,4 @@ function AboutUs(props) {
     </div>
   );
 }
-export default withTranslation("translations")(AboutUs);
+export default withTranslation("translations")(FAC);

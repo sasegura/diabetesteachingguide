@@ -2,6 +2,25 @@
   "translations": {
     "Diabetes": "Diabetes",
     "Diabetes Teaching Guide.": "Diabetes Teaching Guide.",
-    "By Adalberto Aguero.": "By Adalberto Aguero."
+    "By Adalberto Aguero.": "By Adalberto Aguero.",
+    "About": "About Us",
+    "Guide": "Guide Topics",
+    "FAQ": "FAQ",
+    "Language": "Change Language",
+    "User": "User",
+    "Login": "Login",
+    "Logout": "Logout",
+    "ShopCart": "Shopping Cart",
+
+    "GuideIntro": "Introduction to Diabetes",
+    "GuideNutrition": "Nutrition and Carbohydrate Counting",
+    "GuideActivity": "Physical Activity",
+    "GuideWeight": "Weight Management",
+    "GuideGlucose": "Blood Glucose Monitoring",
+    "GuideMedication": "Medication Management",
+    "GuideComplications": "Complications of Uncontrolled Diabetes",
+    "GuideSickDays": "Managing Sick Days",
+    "GuideLiving": "Living with Diabetes",
+    "GuideInsulin": "Insulin"
   }
 }
