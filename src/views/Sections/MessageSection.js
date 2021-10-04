@@ -32,7 +32,7 @@ function MessageSection(props) {
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Your Name"
+                  labelText={t(messageSection.yourName)}
                   id="name"
                   formControlProps={{
                     fullWidth: true
@@ -41,7 +41,7 @@ function MessageSection(props) {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Your Email"
+                  labelText={t(messageSection.yourEmail)}
                   id="email"
                   formControlProps={{
                     fullWidth: true
@@ -49,7 +49,7 @@ function MessageSection(props) {
                 />
               </GridItem>
               <CustomInput
-                labelText="Your Message"
+                labelText={t(messageSection.yourMessage)}
                 id="message"
                 formControlProps={{
                   fullWidth: true,
@@ -61,7 +61,7 @@ function MessageSection(props) {
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
-                <Button color="primary">Send Message</Button>
+                <Button color="primary">{t(messageSection.sendMessage)}</Button>
               </GridItem>
             </GridContainer>
           </form>
