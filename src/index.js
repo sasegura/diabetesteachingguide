@@ -10,6 +10,7 @@ import Components from "views/Components/Components.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutUs from "views/AboutUs/AboutUs";
+import TermsAndConditions from "views/TermsAndConditions/TermsAndConditions";
 import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Cookies from "components/Cookies";
@@ -31,6 +32,7 @@ ReactDOM.render(
         <Route path="/login-page" component={LoginPage} />
         <Route path="/components" component={Components} />
         <Route path="/about-us" component={AboutUs} />
+        <Route path="/terms-and-conditions" component={TermsAndConditions} />
         <Route path="/" component={LandingPage} />
       </Switch>
     </Router>
