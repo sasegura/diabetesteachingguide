@@ -12,6 +12,7 @@ import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutUs from "views/AboutUs/AboutUs";
 import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
 import { Auth0Provider } from "@auth0/auth0-react";
+import Cookies from "components/Cookies";
 
 import "./translations/i18n";
 var hist = createBrowserHistory();
@@ -33,6 +34,7 @@ ReactDOM.render(
         <Route path="/" component={LandingPage} />
       </Switch>
     </Router>
+    <Cookies />
   </Auth0Provider>,
   document.getElementById("root")
 );
