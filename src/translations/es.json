@@ -12,15 +12,15 @@
     "Logout": "Cerrar Sesión",
     "ShopCart": "Carrito de Compras",
 
-    "GuideIntro": "Introducción a la Diabetes",
-    "GuideNutrition": "Nutrición y Conteo de hidratos de carbono",
-    "GuideActivity": "La Diabetes y la Actividad Física",
-    "GuideWeight": "Pérdida de peso",
-    "GuideGlucose": "La importancia de medir la glucosa",
-    "GuideMedication": "Las Medicinas de la Diabetes",
-    "GuideComplications": "Complicaciones de la Diabetes",
-    "GuideSickDays": "Manejo de los dia de Enfermedad",
-    "GuideLiving": "Vivir con Diabetes",
-    "GuideInsulin": "Insulina"
+    "Introduction to Diabetes": "Introducción a la Diabetes",
+    "Nutrition and Carbohydrate Counting": "Nutrición y Conteo de hidratos de carbono",
+    "Physical Activity": "La Diabetes y la Actividad Física",
+    "Weight Management": "Pérdida de peso",
+    "Blood Glucose Monitoring": "La importancia de medir la glucosa",
+    "Medication Management": "Las Medicinas de la Diabetes",
+    "Complications of Uncontrolled Diabetes": "Complicaciones de la Diabetes",
+    "Managing Sick Days": "Manejo de los dia de Enfermedad",
+    "Living with Diabetes": "Vivir con Diabetes",
+    "Insulin": "Insulina"
   }
 }

@@ -12,7 +12,19 @@
     "founder": "Founder of The Healthy Diabetic"
   },
   "presentations": {
-    "explanation": "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life."
+    "explanation": "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life.",
+    "topics": {
+      "topic1": "Introduction to Diabetes",
+      "topic2": "Nutrition and Carbohydrate Counting",
+      "topic3": "Physical Activity",
+      "topic4": "Weight Management",
+      "topic5": "Blood Glucose Monitoring",
+      "topic6": "Medication Management",
+      "topic7": "Complications of Uncontrolled Diabetes",
+      "topic8": "Managing Sick Days",
+      "topic9": "Living with Diabetes",
+      "topic10": "Insulin"
+    }
   },
   "teamSection": {
     "albertAguero": "Alberto Aguero",

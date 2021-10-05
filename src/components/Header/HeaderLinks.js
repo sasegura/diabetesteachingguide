@@ -36,6 +36,10 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   const { t, i18n } = useTranslation();
   const { loginWithRedirect, logout } = useAuth0();
+
+  const guideTopics = require("../../assets/text").presentations.topics;
+  const topicsKeys = Object.keys(guideTopics);
+
   return (
     // TODO remove commented code
     <List className={classes.list}>
@@ -60,100 +64,22 @@ export default function HeaderLinks(props) {
           }}
           hoverColor={"info"}
           buttonIcon={IconList}
-          dropdownList={[
-            // TODO generar la lista con un ciclo
-            <ListItem>
+          dropdownList={
+            topicsKeys.map((key) => { // Todo definir url
+              return <ListItem>
               <Link
                 to="/"
                 className={classes.dropdownLink}
                 style={{ padding: "0px" }}
               >
-                <ListItemText primary={t("GuideIntro")} />
+                <ListItemText primary={t(guideTopics[key])} />
               </Link>
-            </ListItem>,
-            <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t("GuideNutrition")} />
-              </Link>
-            </ListItem>,
-            <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t("GuideActivity")} />
-              </Link>
-            </ListItem>,
-            <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t("GuideWeight")} />
-              </Link>
-            </ListItem>,
-            <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t("GuideGlucose")} />
-              </Link>
-            </ListItem>,
-            <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t("GuideMedication")} />
-              </Link>
-            </ListItem>,
-            <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t("GuideComplications")} />
-              </Link>
-            </ListItem>,
-            <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t("GuideSickDays")} />
-              </Link>
-            </ListItem>,
-            <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t("GuideLiving")} />
-              </Link>
-            </ListItem>,
-            <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t("GuideInsulin")} />
-              </Link>
-            </ListItem>
-          ]}
+            </ListItem>;
+            })
+          }
+
         />
+
       </ListItem>
 
       <ListItem className={classes.listItem}>
@@ -269,7 +195,7 @@ export default function HeaderLinks(props) {
                     onClick={() => {
                       logout({ returnTo: window.location.origin });
                     }}
-                  ></ListItemText>
+                  />
                 </Link>
               </ListItem>,
               <Divider />,

@@ -12,15 +12,15 @@
     "Logout": "Logout",
     "ShopCart": "Shopping Cart",
 
-    "GuideIntro": "Introduction to Diabetes",
-    "GuideNutrition": "Nutrition and Carbohydrate Counting",
-    "GuideActivity": "Physical Activity",
-    "GuideWeight": "Weight Management",
-    "GuideGlucose": "Blood Glucose Monitoring",
-    "GuideMedication": "Medication Management",
-    "GuideComplications": "Complications of Uncontrolled Diabetes",
-    "GuideSickDays": "Managing Sick Days",
-    "GuideLiving": "Living with Diabetes",
-    "GuideInsulin": "Insulin"
+    "Introduction to Diabetes": "Introduction to Diabetes",
+    "Nutrition and Carbohydrate Counting": "Nutrition and Carbohydrate Counting",
+    "Physical Activity": "Physical Activity",
+    "Weight Management": "Weight Management",
+    "Blood Glucose Monitoring": "Blood Glucose Monitoring",
+    "Medication Management": "Medication Management",
+    "Complications of Uncontrolled Diabetes": "Complications of Uncontrolled Diabetes",
+    "Managing Sick Days": "Managing Sick Days",
+    "Living with Diabetes": "Living with Diabetes",
+    "Insulin": "Insulin"
   }
 }
