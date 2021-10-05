@@ -11,6 +11,7 @@
     "Login": "Iniciar Sesión",
     "Logout": "Cerrar Sesión",
     "ShopCart": "Carrito de Compras",
+    "Owner": "Propietario",
 
     "GuideIntro": "Introducción a la Diabetes",
     "GuideNutrition": "Nutrición y Conteo de hidratos de carbono",
@@ -21,6 +22,44 @@
     "GuideComplications": "Complicaciones de la Diabetes",
     "GuideSickDays": "Manejo de los dia de Enfermedad",
     "GuideLiving": "Vivir con Diabetes",
-    "GuideInsulin": "Insulina"
+    "GuideInsulin": "Insulina",
+
+    "_____Cookies": "Cookies",
+    "This website uses cookies to enhance the user experience.": "Este sitio web utiliza cookies para mejorar la experiencia del usuario.",
+    "Acept": "Aceptar",
+
+    "______MessageSection": "MessageSectio",
+    "Message Us": "Envíenos un mensaje",
+    "Send Message": "Enviar mensaje",
+    "Your Message": "Su mensaje",
+    "Your Email": "Su correo",
+    "Your Name": "Tu nombre",
+
+    "_____TeamSection": "TeamSection",
+    "A Message from the Founder of The Healthy Diabetic": "Un mensaje del fundador de The Healthy Diabetic",
+    "As founder of The Healthy Diabetic, LLC, Alberto Aguero, RPh has been consulting with patients in his pharmacy since 2012 and developed The Diabetes Teaching Guide as a clear and easy way to teach his patients about the importance of diabetes self management. Pharmacy Value is one of the few pharmacies in NJ that can bill Medicare for diabetes self management training. Since the beginning Pharmacy Value has had an amazing success rate in overall health improvement of their patients and they hope more pharmacists will fill this much needed gap in patient care.": "Como fundador de The Healthy Diabetic, LLC, Alberto Agüero, RPh ha estado consultando con pacientes en su farmacia desde 2012 y desarrolló la Guía de enseñanza sobre la diabetes como una manera clara y fácil de enseñar a sus pacientes sobre la importancia del autocontrol de la diabetes. Valor de farmacia es una de las pocas farmacias en Nueva Jersey que puede facturar a Medicare por la capacitación en autocontrol de la diabetes. Desde el comienzo, Pharmacy Value ha tenido una tasa de éxito asombrosa en la mejora general de la salud de sus pacientes y esperan que más farmacéuticos llenen este vacío tan necesario en la atención al paciente.",
+
+    "_____ProdutSection": "ProdutSection",
+    "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life.": "La Guía de enseñanza sobre la diabetes para educadores en diabetes consta de 10 presentaciones diferentes y fáciles de seguir tanto en inglés como en español. La Guía de 10 partes cubre todos los aspectos de la vida con diabetes y brinda muchos consejos útiles para mantenerse saludable a diario, así como información detallada. información sobre cómo controlar el azúcar en la sangre y vivir una vida larga y saludable.",
+
+    "_____FAC": "FAC",
+    "Frequently Asked Questions about The Pharmacy Guide for Diabetes Teaching": "Preguntas frecuentes sobre la Guía de farmacia para la enseñanza de la diabetes",
+    "For complete details, please visit the AADE website.": "Para obtener detalles completos, visite el sitio web de AADE.",
+    "Below are some common questions and answers related to using The Pharmacy Guide for Diabetes Teaching, if your question was not answered here please email us;": "A continuación se presentan algunas preguntas y respuestas comunes relacionadas con el uso de la Guía de farmacia para la enseñanza de la diabetes, si su pregunta no fue respondida aquí, envíenos un correo electrónico;",
+    "Who is eligible for The Pharmacy Guide for Diabetes Teaching program?": "¿Quién es elegible para el programa The Pharmacy Guide for Diabetes Teaching?",
+    "What requirements must the pharmacists complete to be eligible for Medicare reimbursement?": "¿Qué requisitos deben cumplir los farmacéuticos para ser elegibles para el reembolso de Medicare?",
+    "What paperwork must be provided to qualify for Medicare reimbursement?": "¿Qué documentación se debe proporcionar para calificar para el reembolso de Medicare?",
+    "This program is open to all independent pharmacists who would like to provide diabetes education to their patients in an individual or group setting.": "Este programa está abierto a todos los farmacéuticos independientes que deseen brindar educación sobre diabetes a sus pacientes en un entorno individual o grupal.",
+    "All pharmacists must obtain at least 15 CE credits in diabetes to begin their diabetes self management teaching. Once the program has begun, contact the AADE and submit an application for approval of the program. Once approved, submit an application to Medicare to be eligible to bill Medicare Part B for your services.": "Todos los farmacéuticos deben obtener al menos 15 créditos CE en diabetes para comenzar su enseñanza de autocontrol de la diabetes. Una vez que el programa haya comenzado, comuníquese con la AADE y envíe una solicitud para la aprobación del programa. Una vez aprobado, envíe una solicitud a Medicare para ser elegible para facturar sus servicios a la Parte B de Medicare.",
+    "Once you have purchased and downloaded our program you will receive all the required forms to manage this program including patient tracking forms, activity logs, and even a step-by-step outline of how to obtain approval for diabetes self-management education from AADE and Medicare.": "Una vez que haya comprado y descargado nuestro programa, recibirá todos los formularios necesarios para administrar este programa, incluidos los formularios de seguimiento de pacientes, registros de actividad e incluso un resumen paso a paso de cómo obtener la aprobación de la AADE para la educación para el autocontrol de la diabetes. y Medicare.",
+
+    "______termsAndConditions": "termsAndConditions",
+    "The Diabetes Teaching Guide is property of Adalberto Aguero, RPh, Founder of The Healthy Diabetic, LLC and can not be copied, reproduced or altered and resold without prior written consent from Adalberto Aguero, RPh or the office of The Healthy Diabetic, LLC.": "La Guía didáctica sobre la diabetes es propiedad de Adalberto Aguero, RPh, fundador de The Healthy Diabetic, LLC y no se puede copiar, reproducir, alterar y revender sin el consentimiento previo por escrito de Adalberto Aguero, RPh o la oficina de The Healthy Diabetic, LLC.",
+    "The purchased presentation is in PDF format to FREE distribution to staff and patients when used in conjunction with an in-house diabetes education course presented by the office which purchased the original Diabetes Teaching Guide.": "La presentación comprada está en formato PDF para su distribución GRATUITA al personal y a los pacientes cuando se usa junto con un curso de educación sobre diabetes interno presentado por la oficina que compró la Guía para la enseñanza de la diabetes original.",
+    "In rare cases we may allow you to purchase the original Power Point slides so you can customize some of the details of the program to fit your needs however all Copyrights and authorship mentions must not be removed, added to or altered in any way by the purchaser.": "En casos excepcionales, podemos permitirle comprar las diapositivas de Power Point originales para que pueda personalizar algunos de los detalles del programa para que se adapten a sus necesidades; sin embargo, todos los derechos de autor y menciones de autoría no deben eliminarse, agregarse ni modificarse en de cualquier forma por parte del comprador.",
+    "If you feel you need the Power Point slides please contact our office for more details.": "Si cree que necesita las diapositivas de Power Point, comuníquese con nuestra oficina para obtener más detalles.",
+    "Adalberto Aguero, RPh": "Adalberto Aguero, RPh",
+    "Founder of The Healthy Diabetic, LLC": "Fundador de The Healthy Diabetic, LLC",
+    "201-662-7954": "201-662-7954"
   }
 }

@@ -83,8 +83,8 @@ function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection />
           <TeamSection />
-          <MessageSection />
           <FacSection />
+          <MessageSection />
         </div>
       </div>
       <Footer />
