@@ -12,12 +12,13 @@ import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutUs from "views/AboutUs/AboutUs";
 import TermsAndConditions from "views/TermsAndConditions/TermsAndConditions";
 import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
+import FAC from "views/FAC/FAC";
+import Forum from "views/AuthenticationRequiered/Forum/Forum";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Cookies from "components/Cookies";
-
 import "./translations/i18n";
+
 var hist = createBrowserHistory();
-import FAC from "views/FAC/FAC";
 
 ReactDOM.render(
   <Auth0Provider
@@ -33,6 +34,7 @@ ReactDOM.render(
         <Route path="/components" component={Components} />
         <Route path="/about-us" component={AboutUs} />
         <Route path="/terms-and-conditions" component={TermsAndConditions} />
+        <Route path="/chat" render={(props) => <Forum {...props} />} />
         <Route path="/" component={LandingPage} />
       </Switch>
     </Router>
