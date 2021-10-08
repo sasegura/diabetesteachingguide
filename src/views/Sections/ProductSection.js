@@ -14,6 +14,7 @@ import PropTypes from "prop-types";
 
 import { presentations, siteTitle } from "assets/text";
 import { withTranslation } from "react-i18next";
+import YouTube from "react-youtube";
 
 ProductSection.propTypes = {
   t: PropTypes.func
@@ -21,6 +22,13 @@ ProductSection.propTypes = {
 
 function ProductSection(props) {
   const { t } = props;
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 1
+    }
+  };
   const classes = useStyles();
   return (
     <div>
@@ -30,6 +38,7 @@ function ProductSection(props) {
           <h5 className={classes.description}>
             {t(presentations.explanation)}
           </h5>
+          <YouTube videoId="BHqCdjoWnv0" opts={opts} />
         </GridItem>
       </GridContainer>
     </div>
