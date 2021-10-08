@@ -35,6 +35,7 @@ import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "components/Header/HeaderBrand";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import { Loading } from "mdi-material-ui";
+import PayPal from "components/PayPal/Paypal";
 
 const useStyles = makeStyles(styles);
 
@@ -224,6 +225,7 @@ function ProfilePage(props) {
           </div>
         </div>
       </div>
+      <PayPal amount={0.01} currency={"USD"} />
       <Footer />
     </div>
   );
