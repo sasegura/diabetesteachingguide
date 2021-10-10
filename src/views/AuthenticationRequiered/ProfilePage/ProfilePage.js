@@ -224,8 +224,9 @@ function ProfilePage(props) {
             </GridContainer>
           </div>
         </div>
+        <PayPal amount={0.01} currency={"USD"} />
       </div>
-      <PayPal amount={0.01} currency={"USD"} />
+
       <Footer />
     </div>
   );
