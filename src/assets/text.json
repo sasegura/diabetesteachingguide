@@ -13,6 +13,7 @@
   },
   "presentations": {
     "explanation": "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life.",
+    "topicsIntro": "The 10 part presentation includes:",
     "topics": {
       "topic1": "Introduction to Diabetes",
       "topic2": "Nutrition and Carbohydrate Counting",
@@ -24,7 +25,9 @@
       "topic8": "Managing Sick Days",
       "topic9": "Living with Diabetes",
       "topic10": "Insulin"
-    }
+    },
+    "explanation2": "Each series consists of up to 20 slides lasting between 30 to 45 minutes in an easy to understand format offered in both English and Spanish.",
+    "explanation3": "Included in the purchase of this program is a set of forms made to help you establish your program, record data and measure patient outcomes. Step by step instructions of certification requirements are also included."
   },
   "teamSection": {
     "albertAguero": "Alberto Aguero",

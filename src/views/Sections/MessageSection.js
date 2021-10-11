@@ -26,8 +26,8 @@ function MessageSection(props) {
   return (
     <div>
       <GridContainer justify="center">
-        <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>{t(messageSection.title)}</h2>
+        <GridItem xs={12} sm={12} md={10}>
+          <h3 className={classes.title}>{t(messageSection.title)}</h3>
           <form>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
