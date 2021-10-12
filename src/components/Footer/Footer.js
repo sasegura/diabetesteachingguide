@@ -92,13 +92,13 @@ export default function Footer(props) {
               {" "}
               {"Guide"}{" "}
             </h6>
-            <Box css={{ height: "85%", borderRight: "1px solid #8c8989" }}>
+            <Box sx={{ height: "85%", borderRight: "1px solid #8c8989" }}>
               <GridContainer style={{ margin: "0px" }}>
                 <GridItem xs={12} sm={12} md={6} style={{ padding: "0px" }}>
                   <List dense={true}>
                     {topicsStart.map((key) => {
                       return (
-                        <ListItem>
+                        <ListItem key={key}>
                           <Link to={""} style={{ color: "#bfbfbf" }}>
                             <ListItemText primary={t(guideTopics[key])} />
                           </Link>
@@ -111,7 +111,7 @@ export default function Footer(props) {
                   <List dense={true}>
                     {topicsEnd.map((key) => {
                       return (
-                        <ListItem>
+                        <ListItem key={key}>
                           <Link to={""} style={{ color: "#bfbfbf" }}>
                             <ListItemText primary={t(guideTopics[key])} />
                           </Link>
@@ -139,7 +139,7 @@ export default function Footer(props) {
           {/*    </List>*/}
           {/*  </Box>*/}
           {/*</GridItem>*/}
-          <GridItem xs={12} sm={6} md={4} wrap="nowrap">
+          <GridItem xs={12} sm={6} md={4}>
             <h6
               className={classesFooter.subSectionTitle}
               style={{ height: "5%" }}
@@ -147,7 +147,7 @@ export default function Footer(props) {
               {" "}
               {"Contact"}{" "}
             </h6>
-            <Box css={{ height: "85%" }}>
+            <Box sx={{ height: "85%" }}>
               <List dense={true}>
                 <ListItem>
                   <ListItemIcon>

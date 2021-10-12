@@ -57,5 +57,8 @@
     "termsAndConditions5": "Adalberto Aguero, RPh",
     "termsAndConditions6": "Founder of The Healthy Diabetic, LLC",
     "termsAndConditions7": "201-662-7954"
+  },
+  "firebase": {
+    "collections": ["messages", "presentations.topics.topic1"]
   }
 }

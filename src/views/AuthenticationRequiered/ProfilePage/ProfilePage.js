@@ -35,14 +35,13 @@ import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "components/Header/HeaderBrand";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import { Loading } from "mdi-material-ui";
+import PayPal from "components/PayPal/Paypal";
 
 const useStyles = makeStyles(styles);
 
 function ProfilePage(props) {
-  const { user, isAuthenticated, isLoading } = useAuth0();
-  console.log(user);
-  console.log(isAuthenticated);
-  console.log(isLoading);
+  const { user /*, isAuthenticated, isLoading */ } = useAuth0();
+
   const classes = useStyles();
   const { ...rest } = props;
   const imageClasses = classNames(
@@ -72,7 +71,7 @@ function ProfilePage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
-            <GridContainer justify="center">
+            <GridContainer justifyContent="center">
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
@@ -105,7 +104,7 @@ function ProfilePage(props) {
                 feel with a solid groove structure.{" "}
               </p>
             </div>
-            <GridContainer justify="center">
+            <GridContainer justifyContent="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
                 <NavPills
                   alignCenter
@@ -115,7 +114,7 @@ function ProfilePage(props) {
                       tabButton: "Studio",
                       tabIcon: Camera,
                       tabContent: (
-                        <GridContainer justify="center">
+                        <GridContainer justifyContent="center">
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
@@ -147,7 +146,7 @@ function ProfilePage(props) {
                       tabButton: "Work",
                       tabIcon: Palette,
                       tabContent: (
-                        <GridContainer justify="center">
+                        <GridContainer justifyContent="center">
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
@@ -184,7 +183,7 @@ function ProfilePage(props) {
                       tabButton: "Favorite",
                       tabIcon: Favorite,
                       tabContent: (
-                        <GridContainer justify="center">
+                        <GridContainer justifyContent="center">
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
@@ -223,7 +222,9 @@ function ProfilePage(props) {
             </GridContainer>
           </div>
         </div>
+        <PayPal amount={0.01} currency={"USD"} />
       </div>
+
       <Footer />
     </div>
   );
