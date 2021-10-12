@@ -8,6 +8,6 @@ ForumSection.propTypes = {
 };
 
 function ForumSection() {
-  return <Chat collection={"messages"} />;
+  return <Chat collection={"debate"} />;
 }
 export default withTranslation("translations")(ForumSection);

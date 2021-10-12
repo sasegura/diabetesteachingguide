@@ -12,13 +12,13 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
 firebase.initializeApp({
-  apiKey: "AIzaSyCQgVImNig8zflIeVlSKtZ_iqQb-DSx-4E",
-  authDomain: "diabetes-bb6d8.firebaseapp.com",
-  projectId: "diabetes-bb6d8",
-  storageBucket: "diabetes-bb6d8.appspot.com",
-  messagingSenderId: "451208097735",
-  appId: "1:451208097735:web:4d65c0b9e2a99cebfa33e2",
-  measurementId: "G-R1BKQ20KBL"
+  apiKey: process.env.REACT_APP_AUTH_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_AUTH_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_AUTH_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_AUTH_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_AUTH_APP_ID,
+  measurementId: process.env.REACT_APP_AUTH_MEASUREMENT_ID
 });
 
 const firestore = firebase.firestore();
@@ -52,7 +52,7 @@ export default function Chat({ collection }) {
   return (
     <div xs={12} sm={12} md={10}>
       <main>
-        <GridContainer justify="center">
+        <GridContainer justifyContent="center">
           {messages &&
             messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
           <span ref={dummy}></span>
@@ -60,7 +60,7 @@ export default function Chat({ collection }) {
       </main>
       <div xs={12} sm={12} md={10}>
         <form onSubmit={sendMessage}>
-          <GridContainer xs={12} sm={12} md={10} justify="center">
+          <GridContainer xs={12} sm={12} md={10} justifyContent="center">
             <GridItem xs={12} sm={12} md={10}>
               <CustomInput
                 labelText="Success input"
@@ -99,7 +99,7 @@ function ChatMessage({ message }) {
     <>
       <GridItem xs={12} sm={12} md={10}>
         <div className={`message `}>
-          <GridContainer justify="center">
+          <GridContainer justifyContent="center">
             <GridItem xs={12} sm={12} md={4}>
               {message.user}
             </GridItem>
