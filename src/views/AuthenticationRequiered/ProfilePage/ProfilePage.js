@@ -73,7 +73,7 @@ function ProfilePage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
-            <GridContainer justify="center">
+            <GridContainer justifyContent="center">
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
@@ -106,7 +106,7 @@ function ProfilePage(props) {
                 feel with a solid groove structure.{" "}
               </p>
             </div>
-            <GridContainer justify="center">
+            <GridContainer justifyContent="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
                 <NavPills
                   alignCenter
@@ -116,7 +116,7 @@ function ProfilePage(props) {
                       tabButton: "Studio",
                       tabIcon: Camera,
                       tabContent: (
-                        <GridContainer justify="center">
+                        <GridContainer justifyContent="center">
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
@@ -148,7 +148,7 @@ function ProfilePage(props) {
                       tabButton: "Work",
                       tabIcon: Palette,
                       tabContent: (
-                        <GridContainer justify="center">
+                        <GridContainer justifyContent="center">
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
@@ -185,7 +185,7 @@ function ProfilePage(props) {
                       tabButton: "Favorite",
                       tabIcon: Favorite,
                       tabContent: (
-                        <GridContainer justify="center">
+                        <GridContainer justifyContent="center">
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
