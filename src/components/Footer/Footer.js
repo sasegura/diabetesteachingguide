@@ -139,7 +139,7 @@ export default function Footer(props) {
           {/*    </List>*/}
           {/*  </Box>*/}
           {/*</GridItem>*/}
-          <GridItem xs={12} sm={6} md={4} wrap="nowrap">
+          <GridItem xs={12} sm={6} md={4}>
             <h6
               className={classesFooter.subSectionTitle}
               style={{ height: "5%" }}
