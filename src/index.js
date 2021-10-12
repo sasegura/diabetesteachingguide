@@ -22,8 +22,8 @@ var hist = createBrowserHistory();
 
 ReactDOM.render(
   <Auth0Provider
-    domain="dev-d3mwcd1i.us.auth0.com"
-    clientId="wDf5efZ9obSpYG2mQESLjsJ7CZjAZBoc"
+    domain={process.env.REACT_APP_AUTH0_DOMINE}
+    clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
     redirectUri={window.location.origin}
   >
     <Router history={hist}>
