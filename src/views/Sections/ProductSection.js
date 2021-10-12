@@ -26,13 +26,13 @@ function ProductSection(props) {
     height: "390",
     width: "100%",
     playerVars: {
-      autoplay: 1
+      autoplay: 0
     }
   };
   const classes = useStyles();
   return (
     <div>
-      <GridContainer justify="center">
+      <GridContainer justifyContent="center">
         <GridItem xs={12} sm={12} md={10}>
           <h2 className={classes.title}>{t(siteTitle)}</h2>
           <h5 className={classes.description}>

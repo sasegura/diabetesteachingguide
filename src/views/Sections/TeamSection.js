@@ -35,7 +35,7 @@ function TeamSection(props) {
   );
   return (
     <div className={classes.container}>
-      <GridContainer justify="center">
+      <GridContainer justifyContent="center">
         <GridItem xs={12} sm={12} md={10}>
           <h2 className={classes.title}>{t(teamSection.messageTitle)}</h2>
           <div>

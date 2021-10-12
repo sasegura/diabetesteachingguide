@@ -40,10 +40,8 @@ import PayPal from "components/PayPal/Paypal";
 const useStyles = makeStyles(styles);
 
 function ProfilePage(props) {
-  const { user, isAuthenticated, isLoading } = useAuth0();
-  console.log(user);
-  console.log(isAuthenticated);
-  console.log(isLoading);
+  const { user /*, isAuthenticated, isLoading */ } = useAuth0();
+
   const classes = useStyles();
   const { ...rest } = props;
   const imageClasses = classNames(

@@ -16,7 +16,7 @@ export default function SectionDownload() {
   return (
     <div className={classes.section}>
       <div className={classes.container}>
-        <GridContainer className={classes.textCenter} justify="center">
+        <GridContainer className={classes.textCenter} justifyContent="center">
           <GridItem xs={12} sm={12} md={8}>
             <h2>Do you love this UI Kit?</h2>
             <h4>
@@ -47,7 +47,7 @@ export default function SectionDownload() {
         </GridContainer>
         <br />
         <br />
-        <GridContainer className={classes.textCenter} justify="center">
+        <GridContainer className={classes.textCenter} justifyContent="center">
           <GridItem xs={12} sm={12} md={8}>
             <h2>Want more?</h2>
             <h4>
@@ -83,7 +83,7 @@ export default function SectionDownload() {
           </GridItem>
         </GridContainer>
         <div className={classes.textCenter + " " + classes.sharingArea}>
-          <GridContainer justify="center">
+          <GridContainer justifyContent="center">
             <h3>Thank you for supporting us!</h3>
           </GridContainer>
           <Button color="twitter">

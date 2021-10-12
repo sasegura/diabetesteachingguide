@@ -47,7 +47,7 @@ function TermsAndConditions(props) {
       />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
-          <GridContainer justify="center">
+          <GridContainer justifyContent="center">
             <GridItem xs={12} sm={12} md={10}>
               <p className={classes.description}>{`${t(
                 termsAndConditions.termsAndConditions1
