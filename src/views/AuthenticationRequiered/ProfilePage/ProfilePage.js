@@ -36,10 +36,17 @@ import { HeaderBrand } from "components/Header/HeaderBrand";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import { Loading } from "mdi-material-ui";
 import PayPal from "components/PayPal/Paypal";
+import { Helmet } from "react-helmet";
+import { profilePage } from "assets/text";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(styles);
+ProfilePage.propTypes = {
+  t: PropTypes.func
+};
 
 function ProfilePage(props) {
+  const { t } = props;
   const { user /*, isAuthenticated, isLoading */ } = useAuth0();
 
   const classes = useStyles();
@@ -52,6 +59,11 @@ function ProfilePage(props) {
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div>
+      <Helmet>
+            <title>{t(profilePage.pageTitle)}</title>
+            <meta name="description" content={profilePage.metaAddress} />
+            <meta charSet="utf-8" />
+      </Helmet>
       <Header
         color="transparent"
         leftLinks={<HeaderBrand className={classes.navLink} />}

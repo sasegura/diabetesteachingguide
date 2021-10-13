@@ -15,6 +15,8 @@ import styles from "assets/jss/material-kit-react/views/profilePage.js";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
 
 import TeamSection from "views/Sections/TeamSection";
+import { Helmet } from "react-helmet";
+import { aboutUs } from "assets/text";
 
 const useStyles = makeStyles(styles);
 
@@ -24,10 +26,16 @@ AboutUs.propTypes = {
 
 function AboutUs(props) {
   const classes = useStyles();
+  const { t } = props;
   const { ...rest } = props;
 
   return (
     <div>
+      <Helmet>
+            <title>{t(aboutUs.pageTitle)}</title>
+            <meta name="description" content={aboutUs.metaAddress} />
+            <meta charSet="utf-8" />
+      </Helmet>
       <Header
         color="transparent"
         leftLinks={<HeaderBrand className={classes.navLink} />}
