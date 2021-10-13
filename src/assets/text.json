@@ -1,15 +1,17 @@
 {
-  "title": "Diabetes",
+  "title": "Diabetes Teaching Guide",
   "siteTitle": "Diabetes Teaching Guide.",
   "owner": "Owner",
   "landingPage": {
-    "title": "Diabetes",
+    "title": "Diabetes Teaching Guide",
     "meta1": "http://diabetesteachingguide.com",
     "slogan": "Diabetes Teaching Guide.",
     "owner": "By Adalberto Aguero."
   },
   "aboutUs": {
-    "founder": "Founder of The Healthy Diabetic"
+    "founder": "Founder of The Healthy Diabetic",
+    "pageTitle": "About-Us-Diabetes Teaching Guide",
+    "metaAddress": "http://diabetesteachingguide.com/about-us"
   },
   "presentations": {
     "explanation": "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life.",
@@ -39,6 +41,8 @@
     "yourName": "Your Name"
   },
   "facSection": {
+    "pageTitle": "FAC-Diabetes Teaching Guide",
+    "metaAddress": "http://diabetesteachingguide.com/FAC",
     "title": "Frequently Asked Questions about The Pharmacy Guide for Diabetes Teaching",
     "link": "For complete details, please visit the AADE website.",
     "text1": "Below are some common questions and answers related to using The Pharmacy Guide for Diabetes Teaching, if your question was not answered here please email us;",
@@ -50,6 +54,8 @@
     "response3": "Once you have purchased and downloaded our program you will receive all the required forms to manage this program including patient tracking forms, activity logs, and even a step-by-step outline of how to obtain approval for diabetes self-management education from AADE and Medicare."
   },
   "termsAndConditions": {
+    "pageTitle": "Terms&Conditions-Diabetes Teaching Guide",
+    "metaAddress": "http://diabetesteachingguide.com/terms-and-conditions",
     "termsAndConditions1": "The Diabetes Teaching Guide is property of Adalberto Aguero, RPh, Founder of The Healthy Diabetic, LLC and can not be copied, reproduced or altered and resold without prior written consent from Adalberto Aguero, RPh or the office of The Healthy Diabetic, LLC.",
     "termsAndConditions2": "The purchased presentation is in PDF format to FREE distribution to staff and patients when used in conjunction with an in-house diabetes education course presented by the office which purchased the original Diabetes Teaching Guide.",
     "termsAndConditions3": "In rare cases we may allow you to purchase the original Power Point slides so you can customize some of the details of the program to fit your needs however all Copyrights and authorship mentions must not be removed, added to or altered in any way by the purchaser.",
@@ -57,6 +63,14 @@
     "termsAndConditions5": "Adalberto Aguero, RPh",
     "termsAndConditions6": "Founder of The Healthy Diabetic, LLC",
     "termsAndConditions7": "201-662-7954"
+  },
+  "profilePage": {
+    "pageTitle": "Profile-Diabetes Teaching Guide",
+    "metaAddress": "http://diabetesteachingguide.com/profile-page"
+  },
+  "forumPage": {
+    "pageTitle": "Forum-Diabetes Teaching Guide",
+    "metaAddress": "http://diabetesteachingguide.com/forum"
   },
   "firebase": {
     "collections": ["messages", "presentations.topics.topic1"]
