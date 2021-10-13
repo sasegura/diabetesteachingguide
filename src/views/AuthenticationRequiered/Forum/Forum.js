@@ -58,7 +58,7 @@ function Forum(props) {
         <div>
           <div className={classes.container}>
             <div className={classes.section}>
-              <ForumSection />
+              <ForumSection collection={"messages"} />
             </div>
           </div>
         </div>

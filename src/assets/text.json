@@ -70,7 +70,8 @@
   },
   "forumPage": {
     "pageTitle": "Forum-Diabetes Teaching Guide",
-    "metaAddress": "http://diabetesteachingguide.com/forum"
+    "metaAddress": "http://diabetesteachingguide.com/forum",
+    "message": "message"
   },
   "firebase": {
     "collections": ["messages", "presentations.topics.topic1"]
