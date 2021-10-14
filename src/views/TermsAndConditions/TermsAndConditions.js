@@ -16,6 +16,7 @@ import { HeaderBrand } from "../../components/Header/HeaderBrand";
 import { termsAndConditions } from "assets/text";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+import { Helmet } from "react-helmet";
 const useStyles = makeStyles(styles);
 
 TermsAndConditions.propTypes = {
@@ -29,6 +30,11 @@ function TermsAndConditions(props) {
 
   return (
     <div>
+      <Helmet>
+            <title>{t(termsAndConditions.pageTitle)}</title>
+            <meta name="description" content={termsAndConditions.metaAddress} />
+            <meta charSet="utf-8" />
+      </Helmet>
       <Header
         color="transparent"
         leftLinks={<HeaderBrand className={classes.navLink} />}

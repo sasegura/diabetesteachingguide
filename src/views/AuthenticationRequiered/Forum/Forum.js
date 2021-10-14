@@ -17,6 +17,8 @@ import { HeaderBrand } from "../../../components/Header/HeaderBrand";
 
 import ForumSection from "views/Sections/ForumSection";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
+import { Helmet } from "react-helmet";
+import { forumPage } from "assets/text";
 
 const useStyles = makeStyles(styles);
 
@@ -26,10 +28,16 @@ Forum.propTypes = {
 
 function Forum(props) {
   const classes = useStyles();
+  const { t } = props;
   const { ...rest } = props;
 
   return (
     <div>
+      <Helmet>
+            <title>{t(forumPage.pageTitle)}</title>
+            <meta name="description" content={forumPage.metaAddress} />
+            <meta charSet="utf-8" />
+      </Helmet>
       <Header
         color="transparent"
         leftLinks={<HeaderBrand className={classes.navLink} />}
@@ -50,7 +58,7 @@ function Forum(props) {
         <div>
           <div className={classes.container}>
             <div className={classes.section}>
-              <ForumSection />
+              <ForumSection collection={"messages"} />
             </div>
           </div>
         </div>

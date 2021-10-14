@@ -11,7 +11,6 @@ import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
@@ -64,17 +63,6 @@ function LandingPage(props) {
             <GridItem xs={12} sm={12} md={4}>
               <h1 className={classes.title}>{t(landingPage.slogan)}</h1>
               <h4>{t(landingPage.owner)}</h4>
-              <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://youtu.be/BHqCdjoWnv0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                Watch video
-              </Button>
             </GridItem>
           </GridContainer>
         </div>
