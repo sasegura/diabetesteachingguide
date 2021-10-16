@@ -12,17 +12,18 @@ import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutUs from "views/AboutUs/AboutUs";
 import TermsAndConditions from "views/TermsAndConditions/TermsAndConditions";
 import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
+import FAC from "views/FAC/FAC";
+import Forum from "views/AuthenticationRequiered/Forum/Forum";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Cookies from "components/Cookies";
-
 import "./translations/i18n";
+
 var hist = createBrowserHistory();
-import FAC from "views/FAC/FAC";
 
 ReactDOM.render(
   <Auth0Provider
-    domain="dev-d3mwcd1i.us.auth0.com"
-    clientId="wDf5efZ9obSpYG2mQESLjsJ7CZjAZBoc"
+    domain={process.env.REACT_APP_AUTH0_DOMINE}
+    clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
     redirectUri={window.location.origin}
   >
     <Router history={hist}>
@@ -33,6 +34,7 @@ ReactDOM.render(
         <Route path="/components" exact component={Components} />
         <Route path="/about-us" exact component={AboutUs} />
         <Route path="/terms-and-conditions" exact component={TermsAndConditions} />
+        <Route path="/chat" render={(props) => <Forum {...props} />} />
         <Route path="/" exact component={LandingPage} />
       </Switch>
     </Router>

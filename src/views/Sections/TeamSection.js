@@ -2,24 +2,22 @@ import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-// import Card from "components/Card/Card.js";
-// import CardBody from "components/Card/CardBody.js";
-// import CardMedia from "@material-ui/core/CardMedia";
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
 import albert from "assets/img/albert.jpg";
-import {teamSection, owner} from "assets/text";
-import {withTranslation} from "react-i18next";
+import { teamSection, owner } from "assets/text";
+import { withTranslation } from "react-i18next";
 import PropTypes from "prop-types";
-// import CardHeader from "../../components/Card/CardHeader";
 
 const useStyles = makeStyles(styles);
 
@@ -28,7 +26,7 @@ TeamSection.propTypes = {
 };
 
 function TeamSection(props) {
-  const {t} = props;
+  const { t } = props;
   const classes = useStyles();
   const imageClasses = classNames(
     classes.imgRaised,
@@ -55,7 +53,9 @@ function TeamSection(props) {
         <GridItem container xs={12} sm={4}
                   direction="column"
                   justifyContent="center"
-                  alignItems="center">
+                  alignItems="center"
+                  className={classes.itemGrid}
+        >
           <img src={albert}
                style={{maxWidth: "60%"}}
                alt="..."

@@ -1,30 +1,37 @@
 import React from "react";
 // @material-ui/core components
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 // core components
-
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
 const useStyles = makeStyles(styles);
 
 import PropTypes from "prop-types";
-import {presentations, siteTitle} from "assets/text";
-import {withTranslation} from "react-i18next";
+
+import { presentations, siteTitle } from "assets/text";
+import { withTranslation } from "react-i18next";
+import YouTube from "react-youtube";
 import {Card, CardMedia, CardContent, CardActionArea} from "@material-ui/core";
-// import Container from "@material-ui/core/Container";
+
 import albert from "assets/img/albert.jpg";
-// import CardHeader from "@material-ui/core/CardHeader";
-// import CardBody from "../../components/Card/CardBody";
 
 ProductSection.propTypes = {
   t: PropTypes.func
 };
 
 function ProductSection(props) {
-  const {t} = props;
+  const { t } = props;
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 0
+    }
+  };
   const classes = useStyles();
   const topics = Object.keys(presentations.topics);
   const topicsComponent = topics && topics.map((key) => {
@@ -44,12 +51,13 @@ function ProductSection(props) {
     )
   });
   return (
-    <GridContainer justify="center">
+    <GridContainer justifyContent="center">
       <GridItem xs={12} sm={12} md={10}>
         <h3 className={classes.title}>{t(siteTitle)}</h3>
         <p className={classes.description}>
           {t(presentations.explanation)}
         </p>
+        <YouTube videoId="BHqCdjoWnv0" opts={opts} />
           <h5 className={classes.title}>{t(presentations.topicsIntro)}</h5>
           <GridContainer xs={12} spacing={3} style={{margin: "0px", paddingBottom: "20px"}}>
             {topicsComponent}

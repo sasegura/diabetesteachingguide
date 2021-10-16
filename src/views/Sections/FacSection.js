@@ -23,14 +23,14 @@ function FacSection(props) {
   const classes = useStyles();
   return (
     <div>
-      <GridContainer justify="center">
+      <GridContainer justifyContent="center">
         <GridItem xs={12} sm={12} md={10}>
           <h3 className={classes.title}>{t(facSection.title)}</h3>
           <h5 className={classes.description}>{t(facSection.text1)}</h5>
         </GridItem>
       </GridContainer>
       <div>
-        <GridContainer justify="center">
+        <GridContainer justifyContent="center">
           <GridItem xs={12} sm={12} md={10}>
             <h4 className={classes.title}>{`Q. ${t(facSection.question1)}`}</h4>
             <p className={classes.description}>{`A. ${t(

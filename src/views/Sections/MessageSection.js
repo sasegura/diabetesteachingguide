@@ -25,7 +25,7 @@ function MessageSection(props) {
   const classes = useStyles();
   return (
     <div>
-      <GridContainer justify="center">
+      <GridContainer justifyContent="center">
         <GridItem xs={12} sm={12} md={10}>
           <h3 className={classes.title}>{t(messageSection.title)}</h3>
           <form>

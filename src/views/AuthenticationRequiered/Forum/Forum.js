@@ -10,20 +10,23 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import PropTypes from "prop-types";
 import { withTranslation } from "react-i18next";
+import { Loading } from "mdi-material-ui";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-import { HeaderBrand } from "../../components/Header/HeaderBrand";
+import { HeaderBrand } from "../../../components/Header/HeaderBrand";
 
-import FacSection from "views/Sections/FacSection";
-import { facSection } from "assets/text";
+import ForumSection from "views/Sections/ForumSection";
+import { withAuthenticationRequired } from "@auth0/auth0-react";
 import { Helmet } from "react-helmet";
+import { forumPage } from "assets/text";
+
 const useStyles = makeStyles(styles);
 
-FAC.propTypes = {
+Forum.propTypes = {
   t: PropTypes.func
 };
 
-function FAC(props) {
+function Forum(props) {
   const classes = useStyles();
   const { t } = props;
   const { ...rest } = props;
@@ -31,8 +34,8 @@ function FAC(props) {
   return (
     <div>
       <Helmet>
-            <title>{t(facSection.pageTitle)}</title>
-            <meta name="description" content={facSection.metaAddress} />
+            <title>{t(forumPage.pageTitle)}</title>
+            <meta name="description" content={forumPage.metaAddress} />
             <meta charSet="utf-8" />
       </Helmet>
       <Header
@@ -55,7 +58,7 @@ function FAC(props) {
         <div>
           <div className={classes.container}>
             <div className={classes.section}>
-              <FacSection />
+              <ForumSection collection={"messages"} />
             </div>
           </div>
         </div>
@@ -64,4 +67,9 @@ function FAC(props) {
     </div>
   );
 }
-export default withTranslation("translations")(FAC);
+export default withAuthenticationRequired(
+  withTranslation("translations")(Forum),
+  {
+    onRedirecting: () => <Loading />
+  }
+);
