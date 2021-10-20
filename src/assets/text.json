@@ -67,13 +67,7 @@
         "q": "What paperwork must be provided to qualify for Medicare reimbursement?",
         "r": "Once you have purchased and downloaded our program you will receive all the required forms to manage this program including patient tracking forms, activity logs, and even a step-by-step outline of how to obtain approval for diabetes self-management education from AADE and Medicare."
       }
-    ],
-    "question1": "Who is eligible for The Pharmacy Guide for Diabetes Teaching program?",
-    "question2": "What requirements must the pharmacists complete to be eligible for Medicare reimbursement?",
-    "question3": "What paperwork must be provided to qualify for Medicare reimbursement?",
-    "response1": "This program is open to all independent pharmacists who would like to provide diabetes education to their patients in an individual or group setting.",
-    "response2": "All pharmacists must obtain at least 15 CE credits in diabetes to begin their diabetes self management teaching. Once the program has begun, contact the AADE and submit an application for approval of the program. Once approved, submit an application to Medicare to be eligible to bill Medicare Part B for your services.",
-    "response3": "Once you have purchased and downloaded our program you will receive all the required forms to manage this program including patient tracking forms, activity logs, and even a step-by-step outline of how to obtain approval for diabetes self-management education from AADE and Medicare."
+    ]
   },
   "termsAndConditions": {
     "pageTitle": "Terms&Conditions-Diabetes Teaching Guide",
