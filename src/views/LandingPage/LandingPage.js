@@ -71,8 +71,9 @@ function LandingPage(props) {
         <div className={classes.container}>
           <VideoIntroSection/>
           <ProductSection />
-          <TeamSection />
           <FacSection />
+          <TeamSection />
+
         </div>
       </div>
       <Footer />

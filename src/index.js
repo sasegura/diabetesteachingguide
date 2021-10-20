@@ -29,7 +29,7 @@ ReactDOM.render(
     <Router history={hist}>
       <Switch>
         <Route path="/profile-page" exact component={ProfilePage} />
-        <Route path="/FAC" exact component={FAC} />
+        <Route path="/faq" exact component={FAC} />
         <Route path="/login-page" exact component={LoginPage} />
         <Route path="/components" exact component={Components} />
         <Route path="/about-us" exact component={AboutUs} />

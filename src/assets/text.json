@@ -13,8 +13,13 @@
     "pageTitle": "About-Us-Diabetes Teaching Guide",
     "metaAddress": "http://diabetesteachingguide.com/about-us"
   },
+  "videoIntro": {
+    "title": "A Message from the Founder of The Healthy Diabetic"
+  },
   "presentations": {
-    "explanation": "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different; easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life.",
+    "explanation": "The Diabetes Teaching Guide for Diabetes Educators consists of 10 different, easy to follow presentations in both English and Spanish. The 10 part Guide covers all aspects of living with Diabetes and provides many useful tips to stay healthy on a daily basis as well as detailed information of how to control your blood sugar and live a long healthy life.",
+    "explanation2": "Each series consists of up to 20 slides lasting between 30 to 45 minutes in an easy to understand format offered in both English and Spanish.",
+    "explanation3": "Included in the purchase of this program is a set of forms made to help you establish your program, record data and measure patient outcomes. Step by step instructions of certification requirements are also included.",
     "topicsIntro": "The 10 part presentation includes:",
     "topics": {
       "topic1": "Introduction to Diabetes",
@@ -27,13 +32,11 @@
       "topic8": "Managing Sick Days",
       "topic9": "Living with Diabetes",
       "topic10": "Insulin"
-    },
-    "explanation2": "Each series consists of up to 20 slides lasting between 30 to 45 minutes in an easy to understand format offered in both English and Spanish.",
-    "explanation3": "Included in the purchase of this program is a set of forms made to help you establish your program, record data and measure patient outcomes. Step by step instructions of certification requirements are also included."
+    }
   },
   "teamSection": {
-    "albertAguero": "Alberto Aguero",
-    "messageTitle": "A Message from the Founder of The Healthy Diabetic",
+    "title": "About the Founder of The Healthy Diabetic.",
+    "founder": "Alberto Aguero",
     "message": "As founder of The Healthy Diabetic, LLC, Alberto Aguero, RPh has been consulting with patients in his pharmacy since 2012 and developed The Diabetes Teaching Guide as a clear and easy way to teach his patients about the importance of diabetes self management. Pharmacy Value is one of the few pharmacies in NJ that can bill Medicare for diabetes self management training. Since the beginning Pharmacy Value has had an amazing success rate in overall health improvement of their patients and they hope more pharmacists will fill this much needed gap in patient care."
   },
   "messageSection": {
@@ -44,11 +47,27 @@
     "yourName": "Your Name"
   },
   "facSection": {
+    "Q": "Q",
+    "A": "A",
     "pageTitle": "FAC-Diabetes Teaching Guide",
     "metaAddress": "http://diabetesteachingguide.com/FAC",
     "title": "Frequently Asked Questions about The Pharmacy Guide for Diabetes Teaching",
     "link": "For complete details, please visit the AADE website.",
     "text1": "Below are some common questions and answers related to using The Pharmacy Guide for Diabetes Teaching, if your question was not answered here please email us;",
+    "questions": [
+      {
+        "q": "Who is eligible for The Pharmacy Guide for Diabetes Teaching program?",
+        "r": "This program is open to all independent pharmacists who would like to provide diabetes education to their patients in an individual or group setting."
+      },
+      {
+        "q": "What requirements must the pharmacists complete to be eligible for Medicare reimbursement?",
+        "r": "All pharmacists must obtain at least 15 CE credits in diabetes to begin their diabetes self management teaching. Once the program has begun, contact the AADE and submit an application for approval of the program. Once approved, submit an application to Medicare to be eligible to bill Medicare Part B for your services."
+      },
+      {
+        "q": "What paperwork must be provided to qualify for Medicare reimbursement?",
+        "r": "Once you have purchased and downloaded our program you will receive all the required forms to manage this program including patient tracking forms, activity logs, and even a step-by-step outline of how to obtain approval for diabetes self-management education from AADE and Medicare."
+      }
+    ],
     "question1": "Who is eligible for The Pharmacy Guide for Diabetes Teaching program?",
     "question2": "What requirements must the pharmacists complete to be eligible for Medicare reimbursement?",
     "question3": "What paperwork must be provided to qualify for Medicare reimbursement?",

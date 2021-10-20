@@ -3,14 +3,13 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 
 // @material-ui/icons
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
@@ -37,7 +36,7 @@ function TeamSection(props) {
 
     <GridContainer justify="center"> {/*<div className={classes.container}>*/}
       <GridItem xs={12} sm={12} md={10}>
-        <h3 className={classes.title}>{t(teamSection.messageTitle)}</h3>
+        <Typography variant={"h5"} className={classes.title}>{t(teamSection.title)}</Typography>
       </GridItem>
 
       <GridItem container xs={12} sm={12} md={10} style={{padding: "0px"}}
@@ -45,9 +44,9 @@ function TeamSection(props) {
                 justifyContent="space-between"
                 alignItems="center" >
         <GridItem xs={12} sm={8}>
-            <p className={classes.description}>
+            <Typography align={"justify"} className={classes.description}>
               {t(teamSection.message)}
-            </p>
+            </Typography>
         </GridItem>
 
         <GridItem container xs={12} sm={4}
@@ -56,15 +55,19 @@ function TeamSection(props) {
                   alignItems="center"
                   className={classes.itemGrid}
         >
-          <img src={albert}
-               style={{maxWidth: "60%"}}
+          <GridItem>
+            <img src={albert}
+               style={{maxWidth: "100%"}}
                alt="..."
                className={imageClasses}/>
-          <h4 className={classes.cardTitle}>
-            {teamSection.albertAguero}
+          </GridItem>
+          <GridItem>
+            <Typography   className={classes.cardTitle}>
+            {teamSection.founder}
             <br/>
-            <small className={classes.smallTitle}>{t(owner)}</small>
-          </h4>
+            <Typography variant={"subtitle2"} component={"small"} className={classes.smallTitle}>{t(owner)}</Typography>
+          </Typography>
+          </GridItem>
         </GridItem>
       </GridItem>
     </GridContainer>

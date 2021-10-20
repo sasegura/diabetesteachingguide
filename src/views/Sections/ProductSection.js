@@ -10,79 +10,111 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/prod
 
 const useStyles = makeStyles(styles);
 
-import PropTypes from "prop-types";
-
 import { presentations, siteTitle } from "assets/text";
-import { withTranslation } from "react-i18next";
-import YouTube from "react-youtube";
-import {Card, CardMedia, CardContent, CardActionArea} from "@material-ui/core";
+import { useTranslation, withTranslation } from "react-i18next";
+import { Card, CardMedia, CardActionArea, CardContent, Typography } from "@material-ui/core";
 
-import albert from "assets/img/albert.jpg";
 
-ProductSection.propTypes = {
-  t: PropTypes.func
+const topicsData = {
+  "Introduction to Diabetes": {
+    "img_en": require("assets/img/guide/1_introduction_to_diabetes.jpg").default,
+    "img_es": require("assets/img/guide/1_introduccion_a_la_diabetes.jpg").default,
+    "url": ""
+  },
+  "Nutrition and Carbohydrate Counting":{
+    "img_en": require("assets/img/guide/2_nutrition_and_carbohydrate_counting.jpg").default,
+    "img_es": require("assets/img/guide/2_nutricion_y_conteo_de_carbohidratos.jpg").default,
+    "url": ""
+  },
+  "Physical Activity": {
+    "img_en": require("assets/img/guide/3_physical_activity.jpg").default,
+    "img_es": require("assets/img/guide/3_la_diabetes_y_la_actividad_fisica.jpg").default,
+    "url": ""
+  },
+  "Weight Management": {
+    "img_en": require("assets/img/guide/4_weight_management.jpg").default,
+    "img_es": require("assets/img/guide/4_perdida_de_peso.jpg").default,
+    "url": ""
+  },
+  "Blood Glucose Monitoring": {
+    "img_en": require("assets/img/guide/5_blood_glucose_monitoring.jpg").default,
+    "img_es": require("assets/img/guide/5_la_importancia_de_medir_la_glucosa.jpg").default,
+    "url": ""
+  },
+  "Medication Management": {
+    "img_en": require("assets/img/guide/6_medication_management.jpg").default,
+    "img_es": require("assets/img/guide/6_las_medicinas_de_la_diabetes.jpg").default,
+    "url": ""
+  },
+  "Complications of Uncontrolled Diabetes": {
+    "img_en": require("assets/img/guide/7_complications_of_uncontrolled_diabetes.jpg").default,
+    "img_es": require("assets/img/guide/7_complicaciones_de_la_diabetes.jpg").default,
+    "url": ""
+  },
+  "Managing Sick Days": {
+    "img_en": require("assets/img/guide/8_managing_sick_days.jpg").default,
+    "img_es": require("assets/img/guide/8_manejo_de_los_dia_de_enfermedad.jpg").default,
+    "url": ""
+  },
+  "Living with Diabetes": {
+    "img_en": require("assets/img/guide/9_living_with_diabetes.jpg").default,
+    "img_es": require("assets/img/guide/9_vivir_con_diabetes.jpg").default,
+    "url": ""
+  },
+  "Insulin": {
+    "img_en": require("assets/img/guide/10_insulin.jpg").default,
+    "img_es": require("assets/img/guide/10_insulina.jpg").default,
+    "url": ""
+  }
 };
 
-function ProductSection(props) {
-  const { t } = props;
-  const opts = {
-    height: "390",
-    width: "100%",
-    playerVars: {
-      autoplay: 0
-    }
-  };
+
+function ProductSection() {
+  const {t, i18n} = useTranslation();
   const classes = useStyles();
+
+  const lang = i18n.resolvedLanguage;
   const topics = Object.keys(presentations.topics);
   const topicsComponent = topics && topics.map((key) => {
+    const imgTitle = presentations.topics[key];
     return (
       <GridItem key={key} xs={12} sm={6} md={4}>
-        <Card>
+        <Card elevation={7}>
           <CardActionArea>
-            <CardMedia component={"img"} alt={"..."} image={albert} height="140px" title={"albert"}/>
+            <CardMedia component={"img"} alt={"..."} image={topicsData[imgTitle]["img_"+lang]} height="200px" title={imgTitle} />
             <CardContent>
-              <h5>
+              <Typography className={classes.title}>
                 {t(presentations.topics[key])}
-              </h5>
+              </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       </GridItem>
     )
   });
+
+
   return (
     <GridContainer justifyContent="center">
       <GridItem xs={12} sm={12} md={10}>
-        <h3 className={classes.title}>{t(siteTitle)}</h3>
-        <p className={classes.description}>
+        <Typography variant={"h5"} className={classes.title}>{t(siteTitle)}</Typography>
+
+        <Typography variant={"body1"} align={"justify"} className={classes.description}>
           {t(presentations.explanation)}
-        </p>
-        <YouTube videoId="BHqCdjoWnv0" opts={opts} />
-          <h5 className={classes.title}>{t(presentations.topicsIntro)}</h5>
-          <GridContainer xs={12} spacing={3} style={{margin: "0px", paddingBottom: "20px"}}>
-            {topicsComponent}
-          </GridContainer>
-
-        <p className={classes.description}>
+        </Typography>
+        <Typography variant={"body1"} align={"justify"} className={classes.description}>
           {t(presentations.explanation2)}
-        </p>
-        <p className={classes.description}>
+        </Typography>
+        <Typography variant={"body1"} align={"justify"} className={classes.description}>
           {t(presentations.explanation3)}
-        </p>
+          </Typography>
 
-        {/*<ul>The 10 part presentation includes:*/}
-        {/*  <li>Introduction to Diabetes</li>*/}
-        {/*  <li>Nutrition and Carbohydrate Counting</li>*/}
-        {/*  <li>Physical Activity</li>*/}
-        {/*  <li>Weight Management</li>*/}
-        {/*  <li>Blood Glucose Monitoring</li>*/}
-        {/*  <li>Complications of Uncontrolled Diabetes</li>*/}
-        {/*  <li>Managing Sick Days</li>*/}
-        {/*  <li>Living with Diabetes</li>*/}
-        {/*  <li>Insulin</li>*/}
-        {/*  <li></li>*/}
-        {/*</ul>*/}
-
+        <Typography variant={"body1"} className={classes.title}>
+          {t(presentations.topicsIntro)}
+        </Typography>
+        <GridContainer xs={12} spacing={3} justifyContent="space-between" style={{ paddingBottom: "20px", marginLeft: "0px"}}>
+          {topicsComponent}
+        </GridContainer>
       </GridItem>
     </GridContainer>
 
