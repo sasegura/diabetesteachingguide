@@ -91,5 +91,10 @@
   },
   "firebase": {
     "collections": ["messages", "presentations.topics.topic1"]
+  },
+  "footer": {
+    "guide": "Guide",
+    "contact": "Contact",
+    "sitemap": "Site Map"
   }
 }

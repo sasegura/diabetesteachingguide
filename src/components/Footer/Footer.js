@@ -48,7 +48,17 @@ const useMainStyles = makeStyles({
 const useFooterStyles = makeStyles({
   subSectionTitle: {
     paddingLeft: "15px",
-    paddingRight: "15px"
+    paddingRight: "15px",
+    fontSize: "17.5px"
+  },
+  li: {
+    padding: "0px",
+
+  },
+  liText: {
+    // marginTop: "0px",
+    // marginBottom: "0px",
+    fontSize: "0.6rem"
   }
 });
 
@@ -75,104 +85,95 @@ export default function Footer(props) {
   const topicsStart = topicsKeys.slice(0, middle);
   const topicsEnd = topicsKeys.slice(middle, topicsLength);
 
+  const footerTitles = require("../../assets/text").footer;
+  const icss = {color: "#bfbfbf", fontSize: "1rem"};
+  const tcss = {color: "#bfbfbf", fontSize: "0.6rem"};
+  const contacts = [
+    {
+      icon: <WhatsAppIcon style={icss}/>,
+      text: <Link to={""} style={tcss}>{"201-662-7954"}</Link>,
+    },
+    {
+      icon: <Chat style={icss}/>,
+      text: <Link to={"/chat"} style={tcss}> {t("Forum")}</Link>
+    },
+    {
+      icon: <EmailIcon style={icss}/>,
+      text: <a href={"mailto:info@diabetesteachingguide.com"} style={tcss}>
+        {"info@diabetesteachingguide.com"}
+      </a>
+    }
+  ];
+
   return (
     <>
       <footer className={classNames(classesMain.main, classesMain.mainRaised)}>
-        <GridContainer spacing={1}
+        <GridContainer spacing={4}
                        direction="row"
                        justifyContent="space-between"
                        alignItems="stretch"
         >
-          <GridItem xs={12} sm={6} md={8}>
-            <Typography variant={"subtitle2"} className={classesFooter.subSectionTitle} >
-              {"Guide"}
+          <GridItem xs={12} sm={12} md={6}>
+            <Typography variant={"subtitle2"} component={"p"} className={classesFooter.subSectionTitle}>
+              {t(footerTitles.guide)}
             </Typography>
-            <Box sx={{borderRight: "1px solid #8c8989"}}>
-              <GridContainer style={{margin: "0px"}}>
-                <GridItem xs={12} sm={12} md={6} style={{padding: "0px"}}>
-                  <List dense={true}>
-                    {topicsStart.map((key) => {
-                      return (
-                        <ListItem key={key}>
-                          <Link to={""} style={{color: "#bfbfbf"}}>
-                            <ListItemText primary={t(guideTopics[key])}/>
-                          </Link>
-                        </ListItem>
-                      );
-                    })}
-                  </List>
-                </GridItem>
-                <GridItem xs={12} sm={12} md={6} style={{padding: "0px"}}>
-                  <List dense={true}>
-                    {topicsEnd.map((key) => {
-                      return (
-                        <ListItem key={key}>
-                          <Link to={""} style={{color: "#bfbfbf"}}>
-                            <ListItemText primary={t(guideTopics[key])}/>
-                          </Link>
-                        </ListItem>
-                      );
-                    })}
-                  </List>
-                </GridItem>
-              </GridContainer>
-            </Box>
+
+            <GridContainer  style={{margin: "0px", borderTop: "1px solid #8c8989"}}>
+              <GridItem xs={12} sm={6} style={{paddingLeft: "0px"}}>
+                <List dense={true}>
+                  {topicsStart.map((key) => {
+                    return (
+                      <ListItem key={key} className={classesFooter.li}>
+                        <Link to={""} style={{color: "#bfbfbf"}}>
+                          <ListItemText primary={t(guideTopics[key])}
+                                        primaryTypographyProps={{style:{fontSize: "0.6rem"}}}/>
+                        </Link>
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </GridItem>
+              <GridItem xs={12} sm={6} style={{padding: "0px"}}>
+                <List dense={true}>
+                  {topicsEnd.map((key) => {
+                    return (
+                      <ListItem key={key} className={classesFooter.li}>
+                        <Link to={""} style={{color: "#bfbfbf"}}>
+                          <ListItemText primary={t(guideTopics[key])}
+                                        primaryTypographyProps={{style:{fontSize: "0.6rem"}}}
+                          />
+                        </Link>
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </GridItem>
+            </GridContainer>
+
           </GridItem>
 
-          <GridItem xs={12} sm={6} md={4}>
-            <Typography variant={"subtitle2"} className={classesFooter.subSectionTitle}>
-              {"Contact"}
+          <GridItem xs={12} sm={6} md={3}>
+            <Typography variant={"subtitle2"} component={"p"} className={classesFooter.subSectionTitle}>
+              {t(footerTitles.sitemap)}
             </Typography>
-            <Box height={"85%"} >
-              <List dense={true}>
-                <ListItem>
-                  <ListItemIcon>
-                    <WhatsAppIcon style={{color: "#bfbfbf"}}/>
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={
-                      <Link to={""} style={{color: "#bfbfbf"}}>
-                        {"201-662-7954"}{" "}
-                      </Link>
-                    }
-                  />
-                </ListItem>
+            <Box style={{borderTop: "1px solid #8c8989"}}></Box>
+          </GridItem>
 
-                <ListItem>
-                  <ListItemIcon color={"#bfbfbf"}>
-                    <EmailIcon style={{color: "#bfbfbf"}} tooltip={"hola"}/>
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={
-                      <a
-                        href={"mailto:info@diabetesteachingguide.com"}
-                        style={{color: "#bfbfbf", maxWidth: "100%"}}
-                      >
-                        <div style={{overFlow: "wrap"}}>
-                          <span style={{display: "inlineBlock"}}>
-                            {"info"}
-                          </span>
-                          <span>{"diabetesteachingguide.com"}</span>{" "}
-                        </div>
-                        {" "}
-                      </a>
-                    }
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <Chat style={{color: "#bfbfbf"}} tooltip={t("Forum")}/>
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={
-                      <Link to={"/chat"} style={{color: "#bfbfbf"}}>
-                        <ListItemText primary={t("Forum")}/>
-                      </Link>
-                    }
-                  />
-                </ListItem>
-              </List>
-            </Box>
+          <GridItem xs={12} sm={6} md={3}>
+            <Typography variant={"subtitle2"} component={"p"} className={classesFooter.subSectionTitle}>
+              {t(footerTitles.contact)}
+            </Typography>
+
+            <List dense={true} style={{borderTop: "1px solid #8c8989"}}>
+              {contacts.map((cnt, idx) => {
+                return (
+                  <ListItem key={"itm"+idx} className={classesFooter.li}>
+                    <ListItemIcon style={{minWidth: "30px"}}> {cnt.icon} </ListItemIcon>
+                    <ListItemText primary={cnt.text}/>
+                  </ListItem>
+                );
+              })}
+            </List>
           </GridItem>
         </GridContainer>
       </footer>
