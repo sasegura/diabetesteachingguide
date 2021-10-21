@@ -12,7 +12,7 @@ import List from "@material-ui/core/List";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItem from "@material-ui/core/ListItem";
-import { Box } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 
 // @material-ui/icons
 // import TwitterIcon from "@material-ui/icons/Twitter";
@@ -56,9 +56,9 @@ export default function Footer(props) {
   const classes = useStyles();
   const classesMain = useMainStyles();
   const classesFooter = useFooterStyles();
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
-  const { whiteFont } = props;
+  const {whiteFont} = props;
   const footerClasses = classNames({
     [classes.footer]: true,
     [classes.footerWhiteFont]: whiteFont
@@ -78,42 +78,37 @@ export default function Footer(props) {
   return (
     <>
       <footer className={classNames(classesMain.main, classesMain.mainRaised)}>
-        <GridContainer
-          spacing={1}
-          direction="row"
-          justifyContent="space-between"
-          alignItems="stretch"
+        <GridContainer spacing={1}
+                       direction="row"
+                       justifyContent="space-between"
+                       alignItems="stretch"
         >
           <GridItem xs={12} sm={6} md={8}>
-            <h6
-              className={classesFooter.subSectionTitle}
-              style={{ height: "5%" }}
-            >
-              {" "}
-              {"Guide"}{" "}
-            </h6>
-            <Box sx={{ height: "85%", borderRight: "1px solid #8c8989" }}>
-              <GridContainer style={{ margin: "0px" }}>
-                <GridItem xs={12} sm={12} md={6} style={{ padding: "0px" }}>
+            <Typography variant={"subtitle2"} className={classesFooter.subSectionTitle} >
+              {"Guide"}
+            </Typography>
+            <Box sx={{borderRight: "1px solid #8c8989"}}>
+              <GridContainer style={{margin: "0px"}}>
+                <GridItem xs={12} sm={12} md={6} style={{padding: "0px"}}>
                   <List dense={true}>
                     {topicsStart.map((key) => {
                       return (
                         <ListItem key={key}>
-                          <Link to={""} style={{ color: "#bfbfbf" }}>
-                            <ListItemText primary={t(guideTopics[key])} />
+                          <Link to={""} style={{color: "#bfbfbf"}}>
+                            <ListItemText primary={t(guideTopics[key])}/>
                           </Link>
                         </ListItem>
                       );
                     })}
                   </List>
                 </GridItem>
-                <GridItem xs={12} sm={12} md={6} style={{ padding: "0px" }}>
+                <GridItem xs={12} sm={12} md={6} style={{padding: "0px"}}>
                   <List dense={true}>
                     {topicsEnd.map((key) => {
                       return (
                         <ListItem key={key}>
-                          <Link to={""} style={{ color: "#bfbfbf" }}>
-                            <ListItemText primary={t(guideTopics[key])} />
+                          <Link to={""} style={{color: "#bfbfbf"}}>
+                            <ListItemText primary={t(guideTopics[key])}/>
                           </Link>
                         </ListItem>
                       );
@@ -123,39 +118,20 @@ export default function Footer(props) {
               </GridContainer>
             </Box>
           </GridItem>
-          {/*<GridItem xs={12} sm={12} md={2}>*/}
-          {/*  <h6 className={classesFooter.subSectionTitle}*/}
-          {/*      style={{height: "5%"}}> {"Site Map"} </h6>*/}
-          {/*  <Box css={{height: "85%", borderRight: "1px solid #8c8989"}}>*/}
-          {/*    <List dense={true}>*/}
-          {/*      {topicsStart.map(([title, link]) => {*/}
-          {/*        console.log(title, link);*/}
-          {/*        return <ListItem>*/}
-          {/*          <Link to={link} style={{color: "#bfbfbf"}}>*/}
-          {/*            <ListItemText primary={title}/>*/}
-          {/*          </Link>*/}
-          {/*        </ListItem>*/}
-          {/*      })}*/}
-          {/*    </List>*/}
-          {/*  </Box>*/}
-          {/*</GridItem>*/}
+
           <GridItem xs={12} sm={6} md={4}>
-            <h6
-              className={classesFooter.subSectionTitle}
-              style={{ height: "5%" }}
-            >
-              {" "}
-              {"Contact"}{" "}
-            </h6>
-            <Box sx={{ height: "85%" }}>
+            <Typography variant={"subtitle2"} className={classesFooter.subSectionTitle}>
+              {"Contact"}
+            </Typography>
+            <Box height={"85%"} >
               <List dense={true}>
                 <ListItem>
                   <ListItemIcon>
-                    <WhatsAppIcon style={{ color: "#bfbfbf" }} />
+                    <WhatsAppIcon style={{color: "#bfbfbf"}}/>
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Link to={""} style={{ color: "#bfbfbf" }}>
+                      <Link to={""} style={{color: "#bfbfbf"}}>
                         {"201-662-7954"}{" "}
                       </Link>
                     }
@@ -164,32 +140,33 @@ export default function Footer(props) {
 
                 <ListItem>
                   <ListItemIcon color={"#bfbfbf"}>
-                    <EmailIcon style={{ color: "#bfbfbf" }} tooltip={"hola"} />
+                    <EmailIcon style={{color: "#bfbfbf"}} tooltip={"hola"}/>
                   </ListItemIcon>
                   <ListItemText
                     primary={
                       <a
                         href={"mailto:info@diabetesteachingguide.com"}
-                        style={{ color: "#bfbfbf", maxWidth: "100%" }}
+                        style={{color: "#bfbfbf", maxWidth: "100%"}}
                       >
-                        <div style={{ overFlow: "wrap" }}>
-                          <span style={{ display: "inlineBlock" }}>
+                        <div style={{overFlow: "wrap"}}>
+                          <span style={{display: "inlineBlock"}}>
                             {"info"}
                           </span>
                           <span>{"diabetesteachingguide.com"}</span>{" "}
-                        </div>{" "}
+                        </div>
+                        {" "}
                       </a>
                     }
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <Chat style={{ color: "#bfbfbf" }} tooltip={t("Forum")} />
+                    <Chat style={{color: "#bfbfbf"}} tooltip={t("Forum")}/>
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Link to={"/chat"} style={{ color: "#bfbfbf" }}>
-                        <ListItemText primary={t("Forum")} />
+                      <Link to={"/chat"} style={{color: "#bfbfbf"}}>
+                        <ListItemText primary={t("Forum")}/>
                       </Link>
                     }
                   />

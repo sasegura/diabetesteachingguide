@@ -83,9 +83,7 @@ export default function HeaderLinks(props) {
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Link to="/FAC" className={classes.navLink}>
-          {" "}
-          {/* TODO Cambiar el link*/}
+        <Link to="/faq" className={classes.navLink}>
           <IconHelpOutline className={classes.icons} />
           {t("FAQ")}
         </Link>

@@ -26,6 +26,7 @@ import { landingPage } from "assets/text";
 import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
 import FacSection from "views/Sections/FacSection.js";
+import VideoIntroSection from "../Sections/VideoIntroSection";
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
@@ -68,9 +69,11 @@ function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+          <VideoIntroSection/>
           <ProductSection />
-          <TeamSection />
           <FacSection />
+          <TeamSection />
+
         </div>
       </div>
       <Footer />

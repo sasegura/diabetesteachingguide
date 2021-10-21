@@ -28,14 +28,14 @@ ReactDOM.render(
   >
     <Router history={hist}>
       <Switch>
-        <Route path="/profile-page" component={ProfilePage} />
-        <Route path="/FAC" component={FAC} />
-        <Route path="/login-page" component={LoginPage} />
-        <Route path="/components" component={Components} />
-        <Route path="/about-us" component={AboutUs} />
-        <Route path="/terms-and-conditions" component={TermsAndConditions} />
+        <Route path="/profile-page" exact component={ProfilePage} />
+        <Route path="/faq" exact component={FAC} />
+        <Route path="/login-page" exact component={LoginPage} />
+        <Route path="/components" exact component={Components} />
+        <Route path="/about-us" exact component={AboutUs} />
+        <Route path="/terms-and-conditions" exact component={TermsAndConditions} />
         <Route path="/chat" render={(props) => <Forum {...props} />} />
-        <Route path="/" component={LandingPage} />
+        <Route path="/" exact component={LandingPage} />
       </Switch>
     </Router>
     <Cookies />

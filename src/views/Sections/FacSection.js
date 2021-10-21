@@ -1,6 +1,7 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -22,36 +23,25 @@ function FacSection(props) {
   const { t } = props;
   const classes = useStyles();
   return (
-    <div>
-      <GridContainer justifyContent="center">
-        <GridItem xs={12} sm={12} md={10}>
-          <h2 className={classes.title}>{t(facSection.title)}</h2>
-          <h5 className={classes.description}>{t(facSection.text1)}</h5>
-        </GridItem>
-      </GridContainer>
-      <div>
-        <GridContainer justifyContent="center">
-          <GridItem xs={12} sm={12} md={10}>
-            <h4 className={classes.title}>{`Q. ${t(facSection.question1)}`}</h4>
-            <p className={classes.description}>{`A. ${t(
-              facSection.response1
-            )}`}</p>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={10}>
-            <h4 className={classes.title}>{`Q. ${t(facSection.question2)}`}</h4>
-            <p className={classes.description}>{`A. ${t(
-              facSection.response2
-            )}`}</p>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={10}>
-            <h4 className={classes.title}>{`Q. ${t(facSection.question3)}`}</h4>
-            <p className={classes.description}>{`A. ${t(
-              facSection.response3
-            )}`}</p>
-          </GridItem>
-        </GridContainer>
-      </div>
-    </div>
+    <GridContainer justifyContent="center" style={{paddingBottom: "1rem"}}>
+
+      <GridItem xs={12} sm={12} md={10}>
+        <Typography variant={"h5"} className={classes.title}>{t(facSection.title)}</Typography>
+        <Typography align={"justify"} className={classes.description}>{t(facSection.text1)}</Typography>
+      </GridItem>
+
+      {facSection.questions.map((qr) => {
+        return (
+          <GridItem xs={12} sm={12} md={10} key={qr.q}>
+            <Typography className={classes.title}>
+              {`${t(facSection.Q)}. ${t(qr.q)}`}
+            </Typography>
+            <Typography align={"justify"} className={classes.description}>
+              {`${t(facSection.A)}. ${t(qr.r)}`}
+            </Typography>
+          </GridItem>)
+      })}
+    </GridContainer>
   );
 }
 export default withTranslation("translations")(FacSection);
