@@ -75,6 +75,12 @@
     "_____Forum": "Forum",
     "Forum": "Foro",
     "message": "Mensaje",
-    "Send": "Enviar"
+    "Send": "Enviar",
+
+    "_____Footer": "Footer",
+    "Topic 1": "Tema 1",
+    "Topic 2": "Tema 2",
+    "Topic n": "Tema n",
+    "Home": "Inicio"
   }
 }

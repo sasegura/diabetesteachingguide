@@ -28,6 +28,7 @@ import GridContainer from "../Grid/GridContainer";
 import GridItem from "../Grid/GridItem";
 import { useTranslation } from "react-i18next";
 import { Chat } from "@material-ui/icons";
+import SiteMap from "./SiteMap";
 
 const useStyles = makeStyles(styles);
 const useMainStyles = makeStyles({
@@ -156,7 +157,7 @@ export default function Footer(props) {
             <Typography variant={"subtitle2"} component={"p"} className={classesFooter.subSectionTitle}>
               {t(footerTitles.sitemap)}
             </Typography>
-            <Box style={{borderTop: "1px solid #8c8989"}}></Box>
+            <SiteMap/>
           </GridItem>
 
           <GridItem xs={12} sm={6} md={3}>
@@ -169,7 +170,7 @@ export default function Footer(props) {
                 return (
                   <ListItem key={"itm"+idx} className={classesFooter.li}>
                     <ListItemIcon style={{minWidth: "30px"}}> {cnt.icon} </ListItemIcon>
-                    <ListItemText primary={cnt.text}/>
+                    <ListItemText primary={cnt.text} style={{margin: "0px"}} />
                   </ListItem>
                 );
               })}
@@ -181,12 +182,14 @@ export default function Footer(props) {
       <footer className={footerClasses}>
         <div className={classes.container}>
           <div className={classes.left}>
-            <a href="#" className={aClasses} target="" underline="none">
-              DiabetesTeachingGuide.com
+            <a href="/" className={aClasses} target="" underline="none">
+              <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}} >{"DiabetesTeachingGuide.com"}</Typography>
             </a>
-            {" -The Healthy Diabetic, LLC- "}
+            <Typography component={"span"} color={"textPrimary"} style={{fontSize: ".85rem"}}>
+              {" _The Healthy Diabetic, LLC_ "}
+            </Typography>
             <a href="mailto:info@diabetesteachingguide.com" underline="none">
-              info@diabetesteachingguide.com
+              <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}}>{"info@diabetesteachingguide.com"}</Typography>
             </a>
           </div>
         </div>
