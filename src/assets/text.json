@@ -35,7 +35,7 @@
     }
   },
   "teamSection": {
-    "title": "About the Founder of The Healthy Diabetic.",
+    "title": "About the Founder of The Healthy Diabetic",
     "founder": "Alberto Aguero",
     "message": "As founder of The Healthy Diabetic, LLC, Alberto Aguero, RPh has been consulting with patients in his pharmacy since 2012 and developed The Diabetes Teaching Guide as a clear and easy way to teach his patients about the importance of diabetes self management. Pharmacy Value is one of the few pharmacies in NJ that can bill Medicare for diabetes self management training. Since the beginning Pharmacy Value has had an amazing success rate in overall health improvement of their patients and they hope more pharmacists will fill this much needed gap in patient care."
   },
@@ -72,13 +72,16 @@
   "termsAndConditions": {
     "pageTitle": "Terms&Conditions-Diabetes Teaching Guide",
     "metaAddress": "http://diabetesteachingguide.com/terms-and-conditions",
-    "termsAndConditions1": "The Diabetes Teaching Guide is property of Adalberto Aguero, RPh, Founder of The Healthy Diabetic, LLC and can not be copied, reproduced or altered and resold without prior written consent from Adalberto Aguero, RPh or the office of The Healthy Diabetic, LLC.",
-    "termsAndConditions2": "The purchased presentation is in PDF format to FREE distribution to staff and patients when used in conjunction with an in-house diabetes education course presented by the office which purchased the original Diabetes Teaching Guide.",
-    "termsAndConditions3": "In rare cases we may allow you to purchase the original Power Point slides so you can customize some of the details of the program to fit your needs however all Copyrights and authorship mentions must not be removed, added to or altered in any way by the purchaser.",
-    "termsAndConditions4": "If you feel you need the Power Point slides please contact our office for more details.",
-    "termsAndConditions5": "Adalberto Aguero, RPh",
-    "termsAndConditions6": "Founder of The Healthy Diabetic, LLC",
-    "termsAndConditions7": "201-662-7954"
+    "sectionTitle": "Terms and conditions",
+    "texts": {
+      "termsAndConditions1": "The Diabetes Teaching Guide is property of Adalberto Aguero, RPh, Founder of The Healthy Diabetic, LLC and can not be copied, reproduced or altered and resold without prior written consent from Adalberto Aguero, RPh or the office of The Healthy Diabetic, LLC.",
+      "termsAndConditions2": "The purchased presentation is in PDF format to FREE distribution to staff and patients when used in conjunction with an in-house diabetes education course presented by the office which purchased the original Diabetes Teaching Guide.",
+      "termsAndConditions3": "In rare cases we may allow you to purchase the original Power Point slides so you can customize some of the details of the program to fit your needs however all Copyrights and authorship mentions must not be removed, added to or altered in any way by the purchaser.",
+      "termsAndConditions4": "If you feel you need the Power Point slides please contact our office for more details.",
+      "termsAndConditions5": "Adalberto Aguero, RPh",
+      "termsAndConditions6": "Founder of The Healthy Diabetic, LLC",
+      "termsAndConditions7": "201-662-7954"
+    }
   },
   "profilePage": {
     "pageTitle": "Profile-Diabetes Teaching Guide",
