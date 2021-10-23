@@ -41,7 +41,7 @@
     "A Message from the Founder of The Healthy Diabetic": "Un mensaje del fundador de 'The Healthy Diabetic'",
 
     "_____TeamSection": "TeamSection",
-    "About the Founder of The Healthy Diabetic.": "Acerca del fundador de 'The Healthy Diabetic'.",
+    "About the Founder of The Healthy Diabetic": "Acerca del fundador de The Healthy Diabetic",
     "As founder of The Healthy Diabetic, LLC, Alberto Aguero, RPh has been consulting with patients in his pharmacy since 2012 and developed The Diabetes Teaching Guide as a clear and easy way to teach his patients about the importance of diabetes self management. Pharmacy Value is one of the few pharmacies in NJ that can bill Medicare for diabetes self management training. Since the beginning Pharmacy Value has had an amazing success rate in overall health improvement of their patients and they hope more pharmacists will fill this much needed gap in patient care.": "Como fundador de The Healthy Diabetic, LLC, Alberto Agüero, RPh ha estado consultando con pacientes en su farmacia desde 2012 y desarrolló la Guía de enseñanza sobre la diabetes como una manera clara y fácil de enseñar a sus pacientes sobre la importancia del autocontrol de la diabetes. Valor de farmacia es una de las pocas farmacias en Nueva Jersey que puede facturar a Medicare por la capacitación en autocontrol de la diabetes. Desde el comienzo, Pharmacy Value ha tenido una tasa de éxito asombrosa en la mejora general de la salud de sus pacientes y esperan que más farmacéuticos llenen este vacío tan necesario en la atención al paciente.",
 
     "_____ProdutSection": "ProdutSection",
@@ -81,6 +81,7 @@
     "Topic 1": "Tema 1",
     "Topic 2": "Tema 2",
     "Topic n": "Tema n",
-    "Home": "Inicio"
+    "Home": "Inicio",
+    "Terms and conditions": "Términos y condiciones"
   }
 }

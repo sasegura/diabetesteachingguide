@@ -114,7 +114,7 @@ export default function Footer(props) {
                        justifyContent="space-between"
                        alignItems="stretch"
         >
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={12} sm={12} md={5}>
             <Typography variant={"subtitle2"} component={"p"} className={classesFooter.subSectionTitle}>
               {t(footerTitles.guide)}
             </Typography>
@@ -160,7 +160,7 @@ export default function Footer(props) {
             <SiteMap/>
           </GridItem>
 
-          <GridItem xs={12} sm={6} md={3}>
+          <GridItem xs={12} sm={6} md={4}>
             <Typography variant={"subtitle2"} component={"p"} className={classesFooter.subSectionTitle}>
               {t(footerTitles.contact)}
             </Typography>
@@ -183,14 +183,22 @@ export default function Footer(props) {
         <div className={classes.container}>
           <div className={classes.left}>
             <a href="/" className={aClasses} target="" underline="none">
-              <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}} >{"DiabetesTeachingGuide.com"}</Typography>
+              <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}} >
+                {"DiabetesTeachingGuide.com "}
+              </Typography>
             </a>
             <Typography component={"span"} color={"textPrimary"} style={{fontSize: ".85rem"}}>
-              {" _The Healthy Diabetic, LLC_ "}
+              {"| The Healthy Diabetic, LLC _ 201-662-7954 |"}
             </Typography>
             <a href="mailto:info@diabetesteachingguide.com" underline="none">
-              <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}}>{"info@diabetesteachingguide.com"}</Typography>
+              <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}}>
+                {" info@diabetesteachingguide.com "}</Typography>
             </a>
+            <Link to={"/terms-and-conditions"} >
+              <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}}>
+                {"| " + t(footerTitles.termsConditions)}
+              </Typography>
+            </Link>
           </div>
         </div>
       </footer>
