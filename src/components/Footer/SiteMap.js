@@ -20,7 +20,8 @@ import {
   List as ListIcon,
   InfoOutlined as InfoIcon,
   HelpOutline as HelpIcon,
-  Subject as SubjectIcon
+  Subject as SubjectIcon,
+  Gavel as GavelIcon
 } from "@material-ui/icons";
 import { useTranslation } from "react-i18next";
 
@@ -67,6 +68,10 @@ export default function SiteMap() {
     {
       icon: <InfoIcon style={icss}/>,
       text: t(texts.about)
+    },
+    {
+      icon: <GavelIcon style={icss}/>,
+      text: t(texts.termsConditions)
     }
   ];
 
