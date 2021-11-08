@@ -17,7 +17,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "../Sections/ProductSection.js";
+import ProductSection from "../Sections/GuideSection.js";
 import TeamSection from "../Sections/TeamSection.js";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";

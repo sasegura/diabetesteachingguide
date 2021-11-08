@@ -69,7 +69,7 @@ const topicsData = {
 };
 
 
-function ProductSection() {
+function GuideSection() {
   const {t, i18n} = useTranslation();
   const classes = useStyles();
 
@@ -121,4 +121,4 @@ function ProductSection() {
   );
 }
 
-export default withTranslation("translations")(ProductSection);
+export default withTranslation("translations")(GuideSection);
