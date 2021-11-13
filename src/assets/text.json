@@ -94,7 +94,8 @@
   },
   "guidePage": {
     "pageTitle": "Guide - Diabetes Teaching Guide",
-    "metaAddress": "http://diabetesteachingguide.com/guide"
+    "metaAddress": "http://diabetesteachingguide.com/guide",
+    "title": "Guide sample slides"
   },
   "firebase": {
     "collections": ["messages", "presentations.topics.topic1"]
