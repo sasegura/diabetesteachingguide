@@ -14,6 +14,7 @@ import TermsAndConditions from "views/TermsAndConditions/TermsAndConditions";
 import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
 import FAC from "views/FAC/FAC";
 import Forum from "views/AuthenticationRequiered/Forum/Forum";
+import GuidePage from "views/Guide/GuidePage";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Cookies from "components/Cookies";
 import "./translations/i18n";
@@ -34,7 +35,8 @@ ReactDOM.render(
         <Route path="/components" exact component={Components} />
         <Route path="/about-us" exact component={AboutUs} />
         <Route path="/terms-and-conditions" exact component={TermsAndConditions} />
-        <Route path="/chat" render={(props) => <Forum {...props} />} />
+        <Route path="/chat" exact render={(props) => <Forum {...props} />} />
+        <Route path="/guide" exact component={GuidePage} />
         <Route path="/" exact component={LandingPage} />
       </Switch>
     </Router>

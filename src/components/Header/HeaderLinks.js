@@ -41,45 +41,12 @@ export default function HeaderLinks(props) {
   const topicsKeys = Object.keys(guideTopics);
 
   return (
-    // TODO remove commented code
     <List className={classes.list}>
-      {/*<ListItem className={classes.listItem}>*/}
-      {/*  <Button*/}
-      {/*    href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"*/}
-      {/*    color="transparent"*/}
-      {/*    target="_blank"*/}
-      {/*    className={classes.navLink}*/}
-      {/*  >*/}
-      {/*    <CloudDownload className={classes.icons} /> Download*/}
-      {/*  </Button>*/}
-      {/*</ListItem>*/}
-
       <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText={t("Guide")}
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          hoverColor={"info"}
-          buttonIcon={IconList}
-          dropdownList={
-            topicsKeys.map((key) => { // Todo definir url
-              return <ListItem>
-              <Link
-                to="/"
-                className={classes.dropdownLink}
-                style={{ padding: "0px" }}
-              >
-                <ListItemText primary={t(guideTopics[key])} />
-              </Link>
-            </ListItem>;
-            })
-          }
-
-        />
-
+        <Link to="/guide" className={classes.navLink}>
+          <IconList className={classes.icons} />
+          {t("Guide")}
+        </Link>
       </ListItem>
 
       <ListItem className={classes.listItem}>
