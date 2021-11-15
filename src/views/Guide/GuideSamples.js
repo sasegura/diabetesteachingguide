@@ -1,12 +1,13 @@
 import React from "react";
 
-import Toolbar from "@material-ui/core/Toolbar";
+// import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 
 import { useTranslation } from "react-i18next";
 import GridContainer from "../../components/Grid/GridContainer";
 // import { Hidden } from "@material-ui/core";
 import GridItem from "../../components/Grid/GridItem";
+import {useHistory, useLocation} from "react-router-dom"
 
 
 // import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -19,6 +20,10 @@ import Carousel from "react-slick";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "../../components/Card/Card";
 import PropTypes from "prop-types";
+import IconButton  from "@material-ui/core/IconButton";
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+// import Button  from "../../components/CustomButtons/Button";
+// import Header from "../../components/Header/Header";
 
 const useStyles = makeStyles(styles);
 
@@ -45,6 +50,10 @@ export default function GuideSamples(props) {
   const [selectedKey, setSelectedKey] = React.useState(topicsKeys[0]);
   const {t, i18n} = useTranslation();
   const classes = useStyles();
+  const historyNav = useHistory();
+  const {pathname} = useLocation();
+
+
   let slider = null;
   const carouselSettings = {
     dots: true,
@@ -71,11 +80,11 @@ export default function GuideSamples(props) {
             key={key}
             button
             selected={selectedKey === key}
-            onClick={(event) => handleListItemClick(event, key)}
+            onClick={(event) => {handleListItemClick(event, key); historyNav.push(pathname+"#carousel")}}
             onMouseDown={()=>slider.slickGoTo(0)}
             style={{ borderRadius: "5px"}}
           >
-            <ListItemText primary={t(guideTopics[key])} />
+            <ListItemText primary={<a href={"#carousel"}> {t(guideTopics[key])} </a>  } />  {/*todo eliminar el link*/}
           </ListItem>
         </>
       })}
@@ -103,12 +112,23 @@ export default function GuideSamples(props) {
 
   return <>
     <GridContainer>
-      <GridItem xs={12}>
-        <Toolbar>
-          <Typography variant={"h5"} className={"classes.title"} align={"center"}>
-            {t(title)}
-          </Typography>
-        </Toolbar>
+      <GridItem container xs={12} style={{padding: "0px", paddingTop: "1rem"}} justifyContent={"space-between"}>
+
+        <GridItem xs={12} sm={10}>
+          <Typography variant={"h5"}
+                      className={"classes.title"}
+                      align={"center"}
+                      style={{display: "inline-block"}}>
+              {t(title)}
+            </Typography>
+        </GridItem>
+        <GridItem xs={12} sm={1}>
+          <IconButton color="primary" aria-label="add to shopping cart"
+                      style={{border: "dotted 1px"}}>
+              <AddShoppingCartIcon/>
+            </IconButton>
+        </GridItem>
+
       </GridItem>
       <GridItem xs={12} sm={3} style={{padding: "0px"}}>
 
@@ -121,7 +141,7 @@ export default function GuideSamples(props) {
       <GridItem sm={1} style={{padding: "0px"}}>
         <Divider orientation="vertical"/>
       </GridItem>
-      <GridItem xs={12} sm={8} className={classes.marginAuto}>
+      <GridItem xs={12} sm={8} className={classes.marginAuto} id={"carousel"}>
         {carousel}
       </GridItem>
     </GridContainer>
