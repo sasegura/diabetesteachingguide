@@ -18,11 +18,10 @@ import { CircularProgress } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-// import "firebase/app";
-// import "firebase/firestore";
-// import "firebase/auth";
-// import "firebase/analytics";
-import firebase from "firebase/compat";
+import firebase from "firebase";
+import "firebase/firestore";
+import "firebase/auth";
+import "firebase/analytics";
 
 firebase.initializeApp({
   apiKey: process.env.REACT_APP_AUTH_API_KEY,
