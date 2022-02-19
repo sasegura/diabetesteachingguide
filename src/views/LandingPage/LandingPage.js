@@ -17,7 +17,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "../Sections/ProductSection.js";
+import ProductSection from "../Sections/GuideSection.js";
 import TeamSection from "../Sections/TeamSection.js";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
@@ -25,8 +25,8 @@ import PropTypes from "prop-types";
 import { landingPage } from "assets/text";
 import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
-import MessageSection from "views/Sections/MessageSection.js";
 import FacSection from "views/Sections/FacSection.js";
+import VideoIntroSection from "../Sections/VideoIntroSection";
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
@@ -69,10 +69,11 @@ function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+          <VideoIntroSection/>
           <ProductSection />
-          <TeamSection />
           <FacSection />
-          <MessageSection />
+          <TeamSection />
+
         </div>
       </div>
       <Footer />

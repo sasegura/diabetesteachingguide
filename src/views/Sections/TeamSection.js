@@ -3,14 +3,13 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 
 // @material-ui/icons
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
@@ -31,41 +30,49 @@ function TeamSection(props) {
   const imageClasses = classNames(
     classes.imgRaised,
     classes.imgRoundedCircle,
-    classes.imgFluid
+    // classes.imgFluid
   );
   return (
-    <div className={classes.container}>
-      <GridContainer justifyContent="center">
-        <GridItem xs={12} sm={12} md={10}>
-          <h2 className={classes.title}>{t(teamSection.messageTitle)}</h2>
-          <div>
-            <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
-                <Card plain>
-                  <CardBody>
-                    <p className={classes.description}>
-                      {t(teamSection.message)}
-                    </p>
-                  </CardBody>
-                </Card>
-              </GridItem>
-              <GridItem xs={12} sm={12} md={6}>
-                <Card plain margin={0}>
-                  <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                    <img src={albert} alt="..." className={imageClasses} />
-                    <h4 className={classes.cardTitle}>
-                      {teamSection.albertAguero}
-                      <br />
-                      <small className={classes.smallTitle}>{t(owner)}</small>
-                    </h4>
-                  </GridItem>
-                </Card>
-              </GridItem>
-            </GridContainer>
-          </div>
+
+    <GridContainer justify="center"> {/*<div className={classes.container}>*/}
+      <GridItem xs={12} sm={12} md={10}>
+        <Typography variant={"h5"} className={classes.title}>{t(teamSection.title)}</Typography>
+      </GridItem>
+
+      <GridItem container xs={12} sm={12} md={10} style={{padding: "0px"}}
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center" >
+        <GridItem xs={12} sm={8}>
+            <Typography align={"justify"} className={classes.description}>
+              {t(teamSection.message)}
+            </Typography>
         </GridItem>
-      </GridContainer>
-    </div>
+
+        <GridItem container xs={12} sm={4}
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  className={classes.itemGrid}
+        >
+          <GridItem>
+            <img src={albert}
+               style={{maxWidth: "100%"}}
+               alt="..."
+               className={imageClasses}/>
+          </GridItem>
+          <GridItem>
+            <Typography   className={classes.cardTitle}>
+            {teamSection.founder}
+            <br/>
+            <Typography variant={"subtitle2"} component={"small"} className={classes.smallTitle}>{t(owner)}</Typography>
+          </Typography>
+          </GridItem>
+        </GridItem>
+      </GridItem>
+    </GridContainer>
+    // </div>
   );
 }
+
 export default withTranslation("translations")(TeamSection);
