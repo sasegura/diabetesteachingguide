@@ -29,6 +29,7 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 import { useAuth0 } from "@auth0/auth0-react";
+import {Gavel as GavelIcon} from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
@@ -39,6 +40,8 @@ export default function HeaderLinks(props) {
 
   const guideTopics = require("../../assets/text").presentations.topics;
   const topicsKeys = Object.keys(guideTopics);
+
+  const conditionsTitle = require("../../assets/text").termsAndConditions.sectionTitle;
 
   return (
     <List className={classes.list}>
@@ -60,6 +63,13 @@ export default function HeaderLinks(props) {
         <Link to="/about-us" className={classes.navLink}>
           <IconInfoOutlined className={classes.icons} />
           {t("About")}
+        </Link>
+      </ListItem>
+
+      <ListItem className={classes.listItem}>
+        <Link to="/terms-and-conditions" className={classes.navLink}>
+          <GavelIcon className={classes.icons}/>
+          {t(conditionsTitle)}
         </Link>
       </ListItem>
 
