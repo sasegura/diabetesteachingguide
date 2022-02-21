@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 // react components for routing our app without refresh
-import { Link, useHistory } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -33,20 +33,18 @@ import {Gavel as GavelIcon} from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
-export default function HeaderLinks(props) {
+export default function HeaderLinks() {
   const classes = useStyles();
   const { t, i18n } = useTranslation();
   const { loginWithRedirect, logout } = useAuth0();
 
-  const guideTopics = require("../../assets/text").presentations.topics;
-  const topicsKeys = Object.keys(guideTopics);
 
   const conditionsTitle = require("../../assets/text").termsAndConditions.sectionTitle;
 
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <Link to="/guide" className={classes.navLink}>
+        <Link to="/guide/topic1" className={classes.navLink}>
           <IconList className={classes.icons} />
           {t("Guide")}
         </Link>

@@ -95,7 +95,7 @@ function GuideSection() {
           return (
             <ListItem key={key} style={{paddingRight: "0"}}>
               <ListItemIcon> <CheckIcon /> </ListItemIcon>
-              <Link to={""} >
+              <Link to={`/guide/${key}`} >
                 <ListItemText primary={t(presentations.topics[key])}
                               primaryTypographyProps={{className: classes.description}}/>
               </Link>

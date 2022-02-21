@@ -12,7 +12,7 @@ import List from "@material-ui/core/List";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItem from "@material-ui/core/ListItem";
-import { Box, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
 // @material-ui/icons
 // import TwitterIcon from "@material-ui/icons/Twitter";
@@ -125,7 +125,7 @@ export default function Footer(props) {
                   {topicsStart.map((key) => {
                     return (
                       <ListItem key={key} className={classesFooter.li}>
-                        <Link to={""} style={{color: "#bfbfbf"}}>
+                        <Link to={`/guide/${key}/`} style={{color: "#bfbfbf"}}>
                           <ListItemText primary={t(guideTopics[key])}
                                         primaryTypographyProps={{style:{fontSize: "0.6rem"}}}/>
                         </Link>
@@ -139,7 +139,7 @@ export default function Footer(props) {
                   {topicsEnd.map((key) => {
                     return (
                       <ListItem key={key} className={classesFooter.li}>
-                        <Link to={""} style={{color: "#bfbfbf"}}>
+                        <Link to={`/guide/${key}`} style={{color: "#bfbfbf"}}>
                           <ListItemText primary={t(guideTopics[key])}
                                         primaryTypographyProps={{style:{fontSize: "0.6rem"}}}
                           />

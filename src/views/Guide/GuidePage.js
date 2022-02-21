@@ -18,6 +18,7 @@ import { HeaderBrand } from "../../components/Header/HeaderBrand";
 import { Helmet } from "react-helmet";
 import { guidePage } from "assets/text";
 import GuideSamples from "./GuideSamples";
+import {useParams} from "react-router-dom";
 
 const useStyles = makeStyles(styles);
 
@@ -29,6 +30,7 @@ function GuidePage(props) {
   const classes = useStyles();
   const {t} = props;
   const {...rest} = props;
+  const {slide} = useParams();
 
   const guideTopics = require("../../assets/text").presentations.topics;
   const topicsData = {
@@ -202,7 +204,7 @@ function GuidePage(props) {
           <div className={classes.container}>
             <div className={classes.section}>
               {/*<GuideSection />*/}
-              <GuideSamples guideTopics={guideTopics} topicsData={topicsData}/>
+              <GuideSamples guideTopics={guideTopics} topicsData={topicsData} initialSlide={slide}/>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ ReactDOM.render(
         <Route path="/about-us" exact component={AboutUs} />
         <Route path="/terms-and-conditions" exact component={TermsAndConditions} />
         <Route path="/chat" exact render={(props) => <Forum {...props} />} />
-        <Route path="/guide" exact component={GuidePage} />
+        <Route path="/guide/:slide" exact component={GuidePage} />
         <Route path="/" exact component={LandingPage} />
       </Switch>
     </Router>

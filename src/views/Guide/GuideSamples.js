@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 // import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import GridContainer from "../../components/Grid/GridContainer";
 // import { Hidden } from "@material-ui/core";
 import GridItem from "../../components/Grid/GridItem";
-import {useHistory, useLocation} from "react-router-dom"
+import {useHistory,} from "react-router-dom"
 
 
 // import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -39,20 +39,34 @@ const useStyles = makeStyles(styles);
 
 GuideSamples.propTypes = {
   guideTopics: PropTypes.object,
-  topicsData: PropTypes.object
+  topicsData: PropTypes.object,
+  initialSlide: PropTypes.string,
 };
 
 export default function GuideSamples(props) {
   const {guideTopics, topicsData} = props;
-  // const guideTopics = require("../../assets/text").presentations.topics;
   const topicsKeys = Object.keys(guideTopics);
   const title = require("../../assets/text").guidePage.title;
   const [selectedKey, setSelectedKey] = React.useState(topicsKeys[0]);
   const {t, i18n} = useTranslation();
   const classes = useStyles();
   const historyNav = useHistory();
-  const {pathname} = useLocation();
 
+  const carouselId = "carousel";
+
+  /* go to the selected initial slide */
+  useEffect(()=>{
+    const slide = props.initialSlide;
+    if (slide){
+      setSelectedKey(slide);
+      scrollToCarousel();
+    }
+  },[props.initialSlide]);
+  
+  const scrollToCarousel = () => {
+    const carousel = document.getElementById(carouselId);
+    carousel.scrollIntoView({behavior: "smooth", block: "center"})
+  }
 
   let slider = null;
   const carouselSettings = {
@@ -71,6 +85,8 @@ export default function GuideSamples(props) {
     key: string,
   ) => {
     setSelectedKey(key);
+    historyNav.push(`/guide/${key}`);
+    scrollToCarousel();
   };
 
   const topicsList = <List component="nav" dense={true} >
@@ -80,18 +96,18 @@ export default function GuideSamples(props) {
             key={key}
             button
             selected={selectedKey === key}
-            onClick={(event) => {handleListItemClick(event, key); historyNav.push(pathname+"#carousel")}}
+            onClick={(event) => handleListItemClick(event, key)}
             onMouseDown={()=>slider.slickGoTo(0)}
             style={{ borderRadius: "5px"}}
           >
-            <ListItemText primary={<a href={"#carousel"}> {t(guideTopics[key])} </a>  } />  {/*todo eliminar el link*/}
+            <ListItemText primary={t(guideTopics[key])} />
           </ListItem>
         </>
       })}
     </List>;
 
   const carousel =
-            <Card carousel>
+            <Card carousel id={carouselId}>
               <Carousel ref={innerSlider => (slider = innerSlider)} {...carouselSettings}>
                 {topicsData[guideTopics[selectedKey]][i18n.resolvedLanguage].map((image, index) => {
                   return <div key={"img"+index}>
@@ -141,7 +157,7 @@ export default function GuideSamples(props) {
       <GridItem sm={1} style={{padding: "0px"}}>
         <Divider orientation="vertical"/>
       </GridItem>
-      <GridItem xs={12} sm={8} className={classes.marginAuto} id={"carousel"}>
+      <GridItem xs={12} sm={8} className={classes.marginAuto}>
         {carousel}
       </GridItem>
     </GridContainer>
