@@ -18,7 +18,8 @@ import { CircularProgress } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-import firebase from "firebase";
+// import firebase from "firebase";
+import firebase from "firebase/compat";
 import "firebase/firestore";
 import "firebase/auth";
 import "firebase/analytics";
