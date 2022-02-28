@@ -18,13 +18,10 @@ import { CircularProgress } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-// import firebase from "firebase";
-import firebase from "firebase/compat";
-import "firebase/firestore";
-import "firebase/auth";
-import "firebase/analytics";
+import {initializeApp} from "firebase/app";
+import {getFirestore} from "firebase/firestore/lite"
 
-firebase.initializeApp({
+const fireStoreApp = initializeApp({
   apiKey: process.env.REACT_APP_AUTH_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
   projectId: process.env.REACT_APP_AUTH_PROJECT_ID,
@@ -33,7 +30,7 @@ firebase.initializeApp({
   appId: process.env.REACT_APP_AUTH_APP_ID,
   measurementId: process.env.REACT_APP_AUTH_MEASUREMENT_ID
 });
-const firestore = firebase.firestore();
+const firestore = getFirestore(fireStoreApp); // firebase.firestore();
 
 const useStyles = makeStyles({
   table: {
@@ -79,7 +76,7 @@ function ForumSection({ collection, t }) {
     e.preventDefault();
     await messagesRef.add({
       text: formValue,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      createdAt: firestore.FieldValue.serverTimestamp(),
       user: user?.name || "",
       picture: user?.picture || "",
       email: user?.email || "",
