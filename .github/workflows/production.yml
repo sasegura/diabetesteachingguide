@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
 
       - name: Build site
         run: CI='' npm run build
