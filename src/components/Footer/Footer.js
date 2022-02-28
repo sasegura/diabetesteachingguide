@@ -29,6 +29,7 @@ import GridItem from "../Grid/GridItem";
 import { useTranslation } from "react-i18next";
 import { Chat } from "@material-ui/icons";
 import SiteMap from "./SiteMap";
+import {siteRoutes} from "../../siteRoutes";
 
 const useStyles = makeStyles(styles);
 const useMainStyles = makeStyles({
@@ -92,11 +93,11 @@ export default function Footer(props) {
   const contacts = [
     {
       icon: <WhatsAppIcon style={icss}/>,
-      text: <Link to={""} style={tcss}>{"201-662-7954"}</Link>,
+      text: <Link to={siteRoutes.index} style={tcss}>{"201-662-7954"}</Link>,
     },
     {
       icon: <Chat style={icss}/>,
-      text: <Link to={"/chat"} style={tcss}> {t("Forum")}</Link>
+      text: <Link to={siteRoutes.chat} style={tcss}> {t("Forum")}</Link>
     },
     {
       icon: <EmailIcon style={icss}/>,
@@ -125,7 +126,7 @@ export default function Footer(props) {
                   {topicsStart.map((key) => {
                     return (
                       <ListItem key={key} className={classesFooter.li}>
-                        <Link to={`/guide/${key}/`} style={{color: "#bfbfbf"}}>
+                        <Link to={`${siteRoutes.guide}/${key}/`} style={{color: "#bfbfbf"}}>
                           <ListItemText primary={t(guideTopics[key])}
                                         primaryTypographyProps={{style:{fontSize: "0.6rem"}}}/>
                         </Link>
@@ -139,7 +140,7 @@ export default function Footer(props) {
                   {topicsEnd.map((key) => {
                     return (
                       <ListItem key={key} className={classesFooter.li}>
-                        <Link to={`/guide/${key}`} style={{color: "#bfbfbf"}}>
+                        <Link to={`${siteRoutes.guide}/${key}`} style={{color: "#bfbfbf"}}>
                           <ListItemText primary={t(guideTopics[key])}
                                         primaryTypographyProps={{style:{fontSize: "0.6rem"}}}
                           />
@@ -182,7 +183,7 @@ export default function Footer(props) {
       <footer className={footerClasses}>
         <div className={classes.container}>
           <div className={classes.left}>
-            <a href="/" className={aClasses} target="" underline="none">
+            <a href={siteRoutes.index} className={aClasses} target="" >
               <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}} >
                 {"DiabetesTeachingGuide.com "}
               </Typography>
@@ -190,11 +191,11 @@ export default function Footer(props) {
             <Typography component={"span"} color={"textPrimary"} style={{fontSize: ".85rem"}}>
               {"| The Healthy Diabetic, LLC _ 201-662-7954 |"}
             </Typography>
-            <a href="mailto:info@diabetesteachingguide.com" underline="none">
+            <a href="mailto:info@diabetesteachingguide.com" >
               <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}}>
                 {" info@diabetesteachingguide.com "}</Typography>
             </a>
-            <Link to={"/terms-and-conditions"} >
+            <Link to={siteRoutes.terms} >
               <Typography component={"span"} color={"primary"} style={{fontSize: ".85rem"}}>
                 {"| " + t(footerTitles.termsConditions)}
               </Typography>

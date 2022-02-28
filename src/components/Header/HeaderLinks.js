@@ -30,6 +30,7 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 import { useAuth0 } from "@auth0/auth0-react";
 import {Gavel as GavelIcon} from "@material-ui/icons";
+import {siteRoutes} from "../../siteRoutes";
 
 const useStyles = makeStyles(styles);
 
@@ -44,28 +45,28 @@ export default function HeaderLinks() {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <Link to="/guide/topic1" className={classes.navLink}>
+        <Link to={siteRoutes.guide+"/topic1"}  className={classes.navLink}>
           <IconList className={classes.icons} />
           {t("Guide")}
         </Link>
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Link to="/faq" className={classes.navLink}>
+        <Link to={siteRoutes.faq} className={classes.navLink}>
           <IconHelpOutline className={classes.icons} />
           {t("FAQ")}
         </Link>
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Link to="/about-us" className={classes.navLink}>
+        <Link to={siteRoutes.about} className={classes.navLink}>
           <IconInfoOutlined className={classes.icons} />
           {t("About")}
         </Link>
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Link to="/terms-and-conditions" className={classes.navLink}>
+        <Link to={siteRoutes.terms} className={classes.navLink}>
           <GavelIcon className={classes.icons}/>
           {t(conditionsTitle)}
         </Link>
@@ -129,7 +130,7 @@ export default function HeaderLinks() {
                   <IconAccountCircle />
                 </ListItemIcon>
                 <Link
-                  to={"/profile-page"}
+                  to={siteRoutes.profile}
                   className={classes.dropdownLink}
                   style={{ padding: "0px" }}
                 >
@@ -142,7 +143,7 @@ export default function HeaderLinks() {
                   <Login />
                 </ListItemIcon>
                 <Link
-                  to={"/profile-page"}
+                  to={siteRoutes.profile} // TODO cambiar el link
                   className={classes.dropdownLink}
                   style={{ padding: "0px" }}
                 >
@@ -159,7 +160,7 @@ export default function HeaderLinks() {
                   <Logout />
                 </ListItemIcon>
                 <Link
-                  to="/"
+                  to={siteRoutes.index}
                   className={classes.dropdownLink}
                   style={{ padding: "0px" }}
                 >

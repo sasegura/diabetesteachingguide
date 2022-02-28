@@ -22,6 +22,7 @@ import Card from "../../components/Card/Card";
 import PropTypes from "prop-types";
 import IconButton  from "@material-ui/core/IconButton";
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import {siteRoutes} from "../../siteRoutes";
 // import Button  from "../../components/CustomButtons/Button";
 // import Header from "../../components/Header/Header";
 
@@ -85,7 +86,7 @@ export default function GuideSamples(props) {
     key: string,
   ) => {
     setSelectedKey(key);
-    historyNav.push(`/guide/${key}`);
+    historyNav.push(`${siteRoutes.guide}/${key}`);
     scrollToCarousel();
   };
 

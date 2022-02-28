@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 
 import CheckIcon from "@material-ui/icons/Check";
+import {siteRoutes} from "../../siteRoutes";
 
 
 // const topicsData = {
@@ -95,7 +96,7 @@ function GuideSection() {
           return (
             <ListItem key={key} style={{paddingRight: "0"}}>
               <ListItemIcon> <CheckIcon /> </ListItemIcon>
-              <Link to={`/guide/${key}`} >
+              <Link to={`${siteRoutes.guide}/${key}`} >
                 <ListItemText primary={t(presentations.topics[key])}
                               primaryTypographyProps={{className: classes.description}}/>
               </Link>
@@ -110,7 +111,7 @@ function GuideSection() {
           return (
             <ListItem key={key} style={{paddingRight: "0"}}>
               <ListItemIcon> <CheckIcon /> </ListItemIcon>
-              <Link to={""}>
+              <Link to={`${siteRoutes.guide}/${key}`}>
                 <ListItemText primary={t(presentations.topics[key])}
                               primaryTypographyProps={{className: classes.description}}
                 />

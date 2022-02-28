@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createBrowserHistory } from "history";
-import { Router, Route, Switch } from "react-router-dom";
+import {createBrowserHistory} from "history";
+import {Route, Router, Switch} from "react-router-dom";
 
 import "assets/scss/material-kit-react.scss?v=1.10.0";
 
@@ -15,9 +15,11 @@ import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
 import FAC from "views/FAC/FAC";
 import Forum from "views/AuthenticationRequiered/Forum/Forum";
 import GuidePage from "views/Guide/GuidePage";
-import { Auth0Provider } from "@auth0/auth0-react";
+import {Auth0Provider} from "@auth0/auth0-react";
 import Cookies from "components/Cookies";
 import "./translations/i18n";
+import {Typography} from "@material-ui/core";
+import {siteRoutes} from "./siteRoutes";
 
 var hist = createBrowserHistory();
 
@@ -29,15 +31,17 @@ ReactDOM.render(
   >
     <Router history={hist}>
       <Switch>
-        <Route path="/profile-page" exact component={ProfilePage} />
-        <Route path="/faq" exact component={FAC} />
-        <Route path="/login-page" exact component={LoginPage} />
-        <Route path="/components" exact component={Components} />
-        <Route path="/about-us" exact component={AboutUs} />
-        <Route path="/terms-and-conditions" exact component={TermsAndConditions} />
-        <Route path="/chat" exact render={(props) => <Forum {...props} />} />
-        <Route path="/guide/:slide" exact component={GuidePage} />
-        <Route path="/" exact component={LandingPage} />
+        <Route path={siteRoutes.profile} exact component={ProfilePage} />
+        <Route path={siteRoutes.faq} exact component={FAC} />
+        <Route path={siteRoutes.login} exact component={LoginPage} />
+        <Route path={siteRoutes.components} exact component={Components} />
+        <Route path={siteRoutes.about} exact component={AboutUs} />
+        <Route path={siteRoutes.terms} exact component={TermsAndConditions} />
+        <Route path={siteRoutes.chat}  exact render={(props) => <Forum {...props} />} />
+        <Route path={siteRoutes.guide+"/:slide"} exact component={GuidePage} />
+        <Route path={siteRoutes.index} exact component={LandingPage} />
+        <Route render={() => <Typography> Page not found! </Typography>} />
+
       </Switch>
     </Router>
     <Cookies />
