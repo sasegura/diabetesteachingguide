@@ -7,6 +7,7 @@ import ListItem from "@material-ui/core/ListItem";
 
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
+import {siteRoutes} from "../../siteRoutes";
 const useStyles = makeStyles(styles);
 
 export const HeaderBrand = (props) => {
@@ -14,12 +15,13 @@ export const HeaderBrand = (props) => {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <Link to={"/"} className={props.className}>
+        <Link to={siteRoutes.index} className={props.className}>
           <img
             src={
               require("../../assets/img/logo/Blue_circle_for_diabetes.svg")
                 .default
             }
+            alt=""
             width="40px"
           />
         </Link>
