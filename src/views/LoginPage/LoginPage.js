@@ -7,9 +7,9 @@ import Icon from "@material-ui/core/Icon";
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
 // core components
-import Header from "components/Header/Header.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import Footer from "components/Footer/Footer.js";
+// import Header from "components/Header/Header.js";
+// import HeaderLinks from "components/Header/HeaderLinks.js";
+// import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -21,26 +21,26 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "assets/img/landing-bg.jpg";
 
 const useStyles = makeStyles(styles);
 
-export default function LoginPage(props) {
+export default function LoginPage() {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function () {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
-  const { ...rest } = props;
+  // const { ...rest } = props;
   return (
     <div>
-      <Header
-        absolute
-        color="transparent"
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        {...rest}
-      />
+      {/*<Header*/}
+      {/*  absolute*/}
+      {/*  color="transparent"*/}
+      {/*  brand="Material Kit React"*/}
+      {/*  rightLinks={<HeaderLinks />}*/}
+      {/*  {...rest}*/}
+      {/*/>*/}
       <div
         className={classes.pageHeader}
         style={{
@@ -147,7 +147,7 @@ export default function LoginPage(props) {
             </GridItem>
           </GridContainer>
         </div>
-        <Footer whiteFont />
+        {/*<Footer whiteFont />*/}
       </div>
     </div>
   );

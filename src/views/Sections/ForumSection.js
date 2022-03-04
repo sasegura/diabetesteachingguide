@@ -19,7 +19,7 @@ import { CircularProgress } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import {initializeApp} from "firebase/app";
-import {getFirestore} from "firebase/firestore/lite"
+import {getFirestore} from "firebase/firestore/lite";
 
 const fireStoreApp = initializeApp({
   apiKey: process.env.REACT_APP_AUTH_API_KEY,
@@ -110,7 +110,7 @@ function ForumSection({ collection, t }) {
                     messages.map((msg) => (
                       <ForumMessage key={msg.id} message={msg} user />
                     ))}
-                  <span ref={dummy}></span>
+                  <span ref={dummy}/>
                 </List>
                 <Divider />
                 <form onSubmit={sendMessage}>
