@@ -37,7 +37,7 @@ const useStyles = makeStyles(styles);
 export default function HeaderLinks() {
   const classes = useStyles();
   const { t, i18n } = useTranslation();
-  const { loginWithRedirect, logout } = useAuth0();
+  // const { loginWithRedirect, logout } = useAuth0();
 
 
   const conditionsTitle = require("../../assets/text").termsAndConditions.sectionTitle;
@@ -142,18 +142,18 @@ export default function HeaderLinks() {
                 <ListItemIcon>
                   <Login />
                 </ListItemIcon>
-                <Link
-                  to={siteRoutes.profile} // TODO cambiar el link
-                  className={classes.dropdownLink}
-                  style={{ padding: "0px" }}
-                >
+
                   <ListItemText
-                    primary={t("Login")}
-                    onClick={() => {
-                      loginWithRedirect();
-                    }}
+                    primary={<Link
+                        to={siteRoutes.login} // TODO cambiar el link
+                        className={classes.dropdownLink}
+                        style={{padding: "0px"}}
+                    > {t("Login")} </Link>}
+                    // onClick={() => {
+                    //   loginWithRedirect();
+                    // }}
                   />
-                </Link>
+
               </ListItem>,
               <ListItem>
                 <ListItemIcon>
@@ -167,7 +167,7 @@ export default function HeaderLinks() {
                   <ListItemText
                     primary={t("Logout")}
                     onClick={() => {
-                      logout({ returnTo: window.location.origin });
+                      // logout({ returnTo: window.location.origin });
                     }}
                   />
                 </Link>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useContext, useRef, useState} from "react";
 import { withTranslation } from "react-i18next";
 import { PropTypes } from "prop-types";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -7,7 +7,7 @@ import ForumMessage from "components/ForumMessage/ForumMessage";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
@@ -18,19 +18,35 @@ import { CircularProgress } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-import {initializeApp} from "firebase/app";
+// import {initializeApp} from "firebase/app";
 import {getFirestore} from "firebase/firestore/lite";
+import "firebase/firestore"
+import {FirebaseContext} from "../../firebaseProvider";
+import {useAuthState} from "react-firebase-hooks/auth";
 
-const fireStoreApp = initializeApp({
-  apiKey: process.env.REACT_APP_AUTH_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_AUTH_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_AUTH_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_AUTH_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_AUTH_APP_ID,
-  measurementId: process.env.REACT_APP_AUTH_MEASUREMENT_ID
-});
-const firestore = getFirestore(fireStoreApp); // firebase.firestore();
+// const fireStoreApp = initializeApp({
+//   apiKey: process.env.REACT_APP_AUTH_API_KEY,
+//   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+//   projectId: process.env.REACT_APP_AUTH_PROJECT_ID,
+//   storageBucket: process.env.REACT_APP_AUTH_STORAGE_BUCKET,
+//   messagingSenderId: process.env.REACT_APP_AUTH_MESSAGING_SENDER_ID,
+//   appId: process.env.REACT_APP_AUTH_APP_ID,
+//   measurementId: process.env.REACT_APP_AUTH_MEASUREMENT_ID
+// });
+
+// **************************************************
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDGYCgY4xP_4Tw-vpsc9yvR9A4OTJIj1NM",
+//   authDomain: "exampleproject-df2ec.firebaseapp.com",
+//   projectId: "exampleproject-df2ec",
+//   storageBucket: "exampleproject-df2ec.appspot.com",
+//   messagingSenderId: "878775131966",
+//   appId: "1:878775131966:web:559becb3d303908c32d66f",
+//   measurementId: "G-1PV9791G6F"
+// };
+// const fireStoreApp = initializeApp(firebaseConfig);
+// ************************************************
+// const firestore = getFirestore(fireStoreApp); // firebase.firestore();
 
 const useStyles = makeStyles({
   table: {
@@ -66,7 +82,11 @@ ForumSection.propTypes = {
 
 function ForumSection({ collection, t }) {
   const classes = useStyles();
-  const { user } = useAuth0();
+  // const { user } = useAuth0();
+  const {firebaseApp} = useContext(FirebaseContext);
+  const [user] = useAuthState(firebaseApp.auth());
+  const firestore = getFirestore(firebaseApp);
+
   const dummy = useRef();
   const messagesRef = firestore.collection(collection);
   const query = messagesRef.orderBy("createdAt").limit(25);

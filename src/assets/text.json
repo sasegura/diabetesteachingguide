@@ -111,5 +111,8 @@
     "t2": "Topic 2",
     "tn": "Topic n",
     "termsConditions": "Terms and conditions"
+  },
+  "login": {
+    "title": "Login"
   }
 }

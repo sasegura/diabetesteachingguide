@@ -10,13 +10,13 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import PropTypes from "prop-types";
 import { withTranslation } from "react-i18next";
-import { Loading } from "mdi-material-ui";
+// import { Loading } from "mdi-material-ui";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 import { HeaderBrand } from "../../../components/Header/HeaderBrand";
 
 import ForumSection from "views/Sections/ForumSection";
-import { withAuthenticationRequired } from "@auth0/auth0-react";
+// import { withAuthenticationRequired } from "@auth0/auth0-react";
 import { Helmet } from "react-helmet";
 import { forumPage } from "assets/text";
 
@@ -67,9 +67,10 @@ function Forum(props) {
     </div>
   );
 }
-export default withAuthenticationRequired(
-  withTranslation("translations")(Forum),
-  {
-    onRedirecting: () => <Loading />
-  }
-);
+export default withTranslation("translations")(Forum);
+// export default withAuthenticationRequired(
+//   withTranslation("translations")(Forum),
+//   {
+//     onRedirecting: () => <Loading />
+//   }
+// );
