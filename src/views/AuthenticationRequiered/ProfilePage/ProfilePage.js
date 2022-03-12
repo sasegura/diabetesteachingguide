@@ -40,7 +40,7 @@ import { Helmet } from "react-helmet";
 import { profilePage } from "assets/text";
 import PropTypes from "prop-types";
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({...styles, small: {height: "380px"}});
 ProfilePage.propTypes = {
   t: PropTypes.func
 };
@@ -60,9 +60,9 @@ function ProfilePage(props) {
   return (
     <div>
       <Helmet>
-            <title>{t(profilePage.pageTitle)}</title>
-            <meta name="description" content={profilePage.metaAddress} />
-            <meta charSet="utf-8" />
+        <title>{t(profilePage.pageTitle)}</title>
+        <meta name="description" content={profilePage.metaAddress} />
+        <meta charSet="utf-8" />
       </Helmet>
       <Header
         color="transparent"
@@ -76,14 +76,14 @@ function ProfilePage(props) {
         {...rest}
       />
       <Parallax
-        small
+        className={classes.small}
         filter
         image={require("assets/img/profile-bg.jpg").default}
       />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
-            <GridContainer justifyContent="center">
+            <GridContainer style={{"justify-content": "center"}}>
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
@@ -116,7 +116,7 @@ function ProfilePage(props) {
                 feel with a solid groove structure.{" "}
               </p>
             </div>
-            <GridContainer justifyContent="center">
+            <GridContainer style={{"justify-content": "center"}}>
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
                 <NavPills
                   alignCenter
@@ -126,7 +126,7 @@ function ProfilePage(props) {
                       tabButton: "Studio",
                       tabIcon: Camera,
                       tabContent: (
-                        <GridContainer justifyContent="center">
+                        <GridContainer style={{"justify-content": "center"}}>
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
@@ -158,7 +158,7 @@ function ProfilePage(props) {
                       tabButton: "Work",
                       tabIcon: Palette,
                       tabContent: (
-                        <GridContainer justifyContent="center">
+                        <GridContainer style={{"justify-content": "center"}}>
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
@@ -195,7 +195,7 @@ function ProfilePage(props) {
                       tabButton: "Favorite",
                       tabIcon: Favorite,
                       tabContent: (
-                        <GridContainer justifyContent="center">
+                        <GridContainer style={{"justify-content": "center"}}>
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
