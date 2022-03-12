@@ -33,8 +33,8 @@ import work5 from "assets/img/examples/clem-onojegaw.jpg";
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "components/Header/HeaderBrand";
-import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
-import { Loading } from "mdi-material-ui";
+// import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
+// import { Loading } from "mdi-material-ui";
 import PayPal from "components/PayPal/Paypal";
 import { Helmet } from "react-helmet";
 import { profilePage } from "assets/text";
@@ -47,15 +47,15 @@ ProfilePage.propTypes = {
 
 function ProfilePage(props) {
   const { t } = props;
-  const { user /*, isAuthenticated, isLoading */ } = useAuth0();
+  // const { user /*, isAuthenticated, isLoading */ } = useAuth0();
 
   const classes = useStyles();
   const { ...rest } = props;
-  const imageClasses = classNames(
-    classes.imgRaised,
-    classes.imgRoundedCircle,
-    classes.imgFluid
-  );
+  // const imageClasses = classNames(
+  //   classes.imgRaised,
+  //   classes.imgRoundedCircle,
+  //   classes.imgFluid
+  // );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div>
@@ -87,23 +87,23 @@ function ProfilePage(props) {
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
-                    {user.picturea ? (
-                      <img
-                        src={user.picture}
-                        alt="..."
-                        className={imageClasses}
-                      />
-                    ) : (
+                    {/*{user.picturea ? (*/}
+                    {/*  <img*/}
+                    {/*    src={user.picture}*/}
+                    {/*    alt="..."*/}
+                    {/*    className={imageClasses}*/}
+                    {/*  />*/}
+                    {/*) : (*/}
                       <div>
                         <Person
                           className={classes.icon}
                           style={{ fill: "purple" }}
                         />
                       </div>
-                    )}
+                    {/*)}*/}
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>{user.name}</h3>
+                    <h3 className={classes.title}>{"user.name"}</h3>
                   </div>
                 </div>
               </GridItem>
@@ -241,9 +241,11 @@ function ProfilePage(props) {
     </div>
   );
 }
-export default withAuthenticationRequired(
-  withTranslation("translations")(ProfilePage),
-  {
-    onRedirecting: () => <Loading />
-  }
-);
+// export default withAuthenticationRequired(
+//   withTranslation("translations")(ProfilePage),
+//   {
+//     onRedirecting: () => <Loading />
+//   }
+// );
+
+export default withTranslation("translations")(ProfilePage);

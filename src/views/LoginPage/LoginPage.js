@@ -49,7 +49,7 @@ export default function LoginPage() {
                 }}
             >
                 <div className={classes.container}>
-                    <GridContainer justifyContent="center">
+                    <GridContainer style={{"justify-content": "center"}}>
                         <GridItem xs={12} sm={12} md={4}>
                             <Card className={classes[cardAnimaton]}>
                                 <form className={classes.form}>
