@@ -24,29 +24,6 @@ import "firebase/firestore"
 import {FirebaseContext} from "../../firebaseProvider";
 import {useAuthState} from "react-firebase-hooks/auth";
 
-// const fireStoreApp = initializeApp({
-//   apiKey: process.env.REACT_APP_AUTH_API_KEY,
-//   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-//   projectId: process.env.REACT_APP_AUTH_PROJECT_ID,
-//   storageBucket: process.env.REACT_APP_AUTH_STORAGE_BUCKET,
-//   messagingSenderId: process.env.REACT_APP_AUTH_MESSAGING_SENDER_ID,
-//   appId: process.env.REACT_APP_AUTH_APP_ID,
-//   measurementId: process.env.REACT_APP_AUTH_MEASUREMENT_ID
-// });
-
-// **************************************************
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDGYCgY4xP_4Tw-vpsc9yvR9A4OTJIj1NM",
-//   authDomain: "exampleproject-df2ec.firebaseapp.com",
-//   projectId: "exampleproject-df2ec",
-//   storageBucket: "exampleproject-df2ec.appspot.com",
-//   messagingSenderId: "878775131966",
-//   appId: "1:878775131966:web:559becb3d303908c32d66f",
-//   measurementId: "G-1PV9791G6F"
-// };
-// const fireStoreApp = initializeApp(firebaseConfig);
-// ************************************************
-// const firestore = getFirestore(fireStoreApp); // firebase.firestore();
 
 const useStyles = makeStyles({
   table: {
